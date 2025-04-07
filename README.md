@@ -1,1 +1,1 @@
-# phras-ologie
+# phraseologie
