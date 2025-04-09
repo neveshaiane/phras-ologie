@@ -483,7 +483,7 @@ body {
 }
 
 .fh5co-lead {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 300;
   color: #484c50;
   margin-bottom: 10px;
@@ -1438,5 +1438,36 @@ body {
 .js .animate-box {
   opacity: 0;
 }
+
+/* video */
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%; /* Use 100% width to make it flexible */
+  max-width: 800px; /* Set a max width */
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+  width: 100%; /* Makes the iframe width 100% of its container */
+  height: 450px; /* Adjust the height to fit well */
+  border: none;
+  border-radius: 20px;
+}
+
+.show-transcription {
+  display: flex;
+  justify-content: center;
+}  
 
 /*# sourceMappingURL=red.css.map */
