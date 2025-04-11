@@ -279,30 +279,34 @@
 		  </style>
 		</head>
 		<body>
-		<h2>Les fonctionnalités de PPI</h2>
+		<h2>Bienvenue ! (Nouvelle voisine vient se présenter)</h2>
 		<div class="container">
 		  <!-- Options déplacées au-dessus -->
 		  <div class="options">
-			<div class="item" draggable="true">Salut </div>
+			<div class="item" draggable="true">Bonjour</div>
+			<div class="item" draggable="true">Salut</div>
+			<div class="item" draggable="true">Enchanté⸱e !</div>			
 			<div class="item" draggable="true">Ça va ?</div>
-			<div class="item" draggable="true">Au revoir </div>
-			<div class="item" draggable="true">Bonne continuation</div>
-			<div class="item" draggable="true">Je ne suis pas d'accord</div>
-			<div class="item" draggable="true">Je </div>
+			<div class="item" draggable="true">Ça marche</div>
+			<div class="item" draggable="true">C'est bon. Il est pour moi.</div>
+			<div class="item" draggable="true">Bonne journée !</div>
+			<div class="item" draggable="true">Si tu as besoin de quoi que ce soit tu me dis</div>
+			<div class="item" draggable="true">Pas de souci</div>
+			<div class="item" draggable="true">Au revoir</div>
 		  </div>
 		
 		  <!-- Zones de dépôt -->
 		  <div class="zone" id="zone1">
 			<strong>Saluer</strong>
 		  </div>
-		  <div class="zone" id="zone2">
-			<strong>Remercier</strong>
-		  </div>
 		  <div class="zone" id="zone3">
-			<strong>Accepter</strong>
+			<strong>Confirmer</strong>
 		  </div>
 		  <div class="zone" id="zone4">
-			<strong>Refuser</strong>
+			<strong>Faire connaissance</strong>
+		  </div>
+		  <div class="zone" id="zone5">
+			<strong>?</strong>
 		  </div>
 		</div>
 		
@@ -393,10 +397,17 @@
 		  }
 
 		  const correctAnswers = {
-			"Le fond de bœuf": "zone2",
-			"Un peu d’eau": "zone2",
-			"Du miel": "zone3",
-			"Du miel": "zone4",
+			"Bonjour": "zone1",
+			"Salut": "zone1",
+			"Enchanté⸱e !": "zone4",
+			"Ça va ?": "zone1",
+			"Ça marche": "zone3",
+			"C'est bon. Il est pour moi.": "zone3",
+			"Bonne journée !": "zone1",
+			"Pas de souci": "zone5",
+			"Si tu as besoin de quoi que ce soit tu me dis": "zone5",
+			"Au revoir": "zone1",
+
 		  };
 
 		  document.getElementById('correction-btn').addEventListener('click', () => {
