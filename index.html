@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -122,50 +121,182 @@
 					</div>
 				</div>
 				<section class="intro">
-					<div class="video-container">
-						<div class="video-wrapper">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/7vMhCj00-gM?si=3NttLvMbJJwri4kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<div class="text-center">
+						<div class="video-container">
+							<div class="video-wrapper">
+								<iframe width="80%" height="400" src="https://www.youtube.com/embed/7vMhCj00-gM?si=3NttLvMbJJwri4kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
 						</div>
-					  </div>
-					
-					<div class="show-transcription" onclick="toggleAnswer(this)">
-						<a href="#" class="scroll-btn">
-							<span class="text">Lire la transcription de la vidéo introductive</span>
-							<span class="arrow"><i class="icon-chevron-down"></i></span>
-						</a>
+						<button class="btn btn-primary" onclick="openQuiz()">Commencer le quiz</button>
 					</div>
-					
-					<!-- Hidden content for transcription -->
-					<div class="transcription-content" style="display: none;">
-						<p><strong>Les phrases préfabriquées des interactions (PPI)</strong></p>
-						
-						<p><strong>🗣️ Ces phrases vous sont-elles familières ?</strong></p>
-						<p>Il fallait pas</p>
-						<p>C’est gentil !</p>
-						<p>On ne va pas se mentir</p>
-						<p>C’est bon !</p>
-						<p>Comment dirais-je ?</p>
-						
-						<p><strong>LES PPI</strong></p>
-						<p>👉 Les PPI sont des formules toutes faites qu’on utilise souvent quand on parle avec les autres, surtout dans des situations courantes.</p>
-						
-						
-						<p>Ce sont des phrases ou morceaux de phrases qu'on a l'habitude d'entendre et de répéter sans trop y réfléchir.</p>
-						
-						<p>On les emploie souvent spontanément parce qu’elles font partie des codes de la conversation.</p>
-						
-						<p><strong>Quelques fonctionnalités des PPI (saluer, remercier, négocier, proposer, inviter)</strong></p>
-						
-						<p>Assez souvent, une même PPI convient parfaitement à des contextes très différents mais peut ne pas avoir le même sens suivant son contexte.</p>
-						<p>Exemple : c’est bon.</p>
-						
-						<p><strong>Quels apports pour l’apprentissage ?</strong></p>
-						<p>Ces phrases sont pratiques et efficaces : elles sont déjà “prêtes à l’emploi”, donc on n’a pas besoin de chercher à chaque fois une nouvelle manière de dire les choses.</p>
-						
-						<p>Elles sont souvent utilisées et il y a beaucoup de PPI. Notre but, ce n’est pas d’apprendre par cœur, mais de vous aider à les reconnaître et à les comprendre. Comme ça, la prochaine fois que vous les entendrez, vous pourrez comprendre leur sens en fonction du contexte et vous dire : « C’est une phrase sympa », en ajoutant à votre vocabulaire aussi bien sa forme que son (ou ses) sens.</p>
-						</div>	
+
+					<!-- Quiz modal -->
+					<div id="quiz-modal" class="quiz-modal" style="display: none;">
+						<div class="quiz-modal-content">
+							<span class="close" onclick="closeQuiz()">&times;</span>
+							<h3>Quiz : Comprendre les PPI</h3>
+							<form id="quiz-form">
+								<p><strong>1. Que signifie PPI ?</strong></p>
+								<label><input type="radio" name="q1" value="a"> Phrases Préparées pour l'Interaction</label><br>
+								<label><input type="radio" name="q1" value="b"> Phrases Préfabriquées des Interactions</label><br>
+								<label><input type="radio" name="q1" value="c"> Phrases Personnelles et Informelles</label><br>
+
+								<p><strong>2. Pourquoi les PPI sont-elles utiles ?</strong></p>
+								<label><input type="radio" name="q2" value="a"> Elles sont prêtes à l'emploi</label><br>
+								<label><input type="radio" name="q2" value="b"> Elles sont rarement utilisées</label><br>
+								<label><input type="radio" name="q2" value="c"> Elles remplacent tout le vocabulaire</label><br>
+
+								<p><strong>3. Quelle phrase est un exemple de PPI ?</strong></p>
+								<label><input type="radio" name="q3" value="a"> C'est gentil !</label><br>
+								<label><input type="radio" name="q3" value="b"> Je vais à la bibliothèque</label><br>
+								<label><input type="radio" name="q3" value="c"> Il fait beau aujourd'hui</label><br>
+
+								<button type="button" onclick="submitQuiz()">Valider</button>
+								<button type="button" onclick="resetQuiz()">Refaire</button>
+							</form>
+							<div id="quiz-result" style="margin-top: 20px; display: none;"></div>
+						</div>
 					</div>
 				</section>
+				<style>
+					.quiz-modal {
+						position: fixed;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(0, 0, 0, 0.8);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						z-index: 1000;
+						padding: 10px;
+					}
+
+					.quiz-modal-content {
+						background-color: #fff;
+						padding: 15px;
+						border-radius: 8px;
+						width: 90%;
+						max-width: 400px;
+						text-align: left;
+						position: relative;
+					}
+
+					.quiz-modal-content .close {
+						position: absolute;
+						top: 10px;
+						right: 15px;
+						font-size: 24px;
+						font-weight: bold; /* Rendre le "X" plus visible */
+						color: #333; /* Couleur sombre pour contraste */
+						background-color: #fff; /* Fond blanc pour meilleure visibilité */
+						border: 1px solid #ccc; /* Bordure pour démarcation */
+						border-radius: 50%; /* Forme circulaire */
+						width: 30px;
+						height: 30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+						box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Légère ombre */
+					}
+
+					.quiz-modal-content .close:hover {
+						background-color: #f8d7da; /* Couleur de survol */
+						color: #721c24; /* Couleur de texte sur survol */
+					}
+
+					.btn-primary {
+						margin-top: 20px;
+						padding: 10px 20px;
+						background-color: #007bff;
+						color: #fff;
+						border: none;
+						border-radius: 5px;
+						cursor: pointer;
+					}
+
+					.btn-primary:hover {
+						background-color: #0056b3;
+					}
+				</style>
+
+				<script>
+					function openQuiz() {
+						document.getElementById("quiz-modal").style.display = "flex";
+					}
+
+					function closeQuiz() {
+						document.getElementById("quiz-modal").style.display = "none";
+					}
+
+					function submitQuiz() {
+						const answers = {
+							q1: "b",
+							q2: "a",
+							q3: "a"
+						};
+
+						let score = 0;
+						const form = document.getElementById("quiz-form");
+						const resultDiv = document.getElementById("quiz-result");
+
+						for (const [question, correctAnswer] of Object.entries(answers)) {
+							const userAnswer = form.elements[question].value;
+							if (userAnswer === correctAnswer) {
+								score++;
+							}
+						}
+
+						resultDiv.style.display = "block";
+						resultDiv.innerHTML = `<p>Vous avez obtenu ${score} sur ${Object.keys(answers).length} bonnes réponses.</p>`;
+					}
+
+					function resetQuiz() {
+						const form = document.getElementById("quiz-form");
+						form.reset(); // Reset all form inputs
+						document.getElementById("quiz-result").style.display = "none"; // Hide the result
+					}
+				</script>
+				<div class="show-transcription" onclick="toggleAnswer(this)">
+					<a href="#" class="scroll-btn">
+						<span class="text">Lire la transcription de la vidéo introductive</span>
+						<span class="arrow"><i class="icon-chevron-down"></i></span>
+					</a>
+				</div>
+				
+				<!-- Hidden content for transcription -->
+				<div class="transcription-content" style="display: none;">
+					<p><strong>Les phrases préfabriquées des interactions (PPI)</strong></p>
+					
+					<p><strong>🗣️ Ces phrases vous sont-elles familières ?</strong></p>
+					<p>Il fallait pas</p>
+					<p>C’est gentil !</p>
+					<p>On ne va pas se mentir</p>
+					<p>C’est bon !</p>
+					<p>Comment dirais-je ?</p>
+					
+					<p><strong>LES PPI</strong></p>
+					<p>👉 Les PPI sont des formules toutes faites qu’on utilise souvent quand on parle avec les autres, surtout dans des situations courantes.</p>
+					
+					
+					<p>Ce sont des phrases ou morceaux de phrases qu'on a l'habitude d'entendre et de répéter sans trop y réfléchir.</p>
+					
+					<p>On les emploie souvent spontanément parce qu’elles font partie des codes de la conversation.</p>
+					
+					<p><strong>Quelques fonctionnalités des PPI (saluer, remercier, négocier, proposer, inviter)</strong></p>
+					
+					<p>Assez souvent, une même PPI convient parfaitement à des contextes très différents mais peut ne pas avoir le même sens suivant son contexte.</p>
+					<p>Exemple : c’est bon.</p>
+					
+					<p><strong>Quels apports pour l’apprentissage ?</strong></p>
+					<p>Ces phrases sont pratiques et efficaces : elles sont déjà “prêtes à l’emploi”, donc on n’a pas besoin de chercher à chaque fois une nouvelle manière de dire les choses.</p>
+					
+					<p>Elles sont souvent utilisées et il y a beaucoup de PPI. Notre but, ce n’est pas d’apprendre par cœur, mais de vous aider à les reconnaître et à les comprendre. Comme ça, la prochaine fois que vous les entendrez, vous pourrez comprendre leur sens en fonction du contexte et vous dire : « C’est une phrase sympa », en ajoutant à votre vocabulaire aussi bien sa forme que son (ou ses) sens.</p>
+					</div>	
+				</div>
+			</section>
 		<!--
 				<section class="content">
 					<h2>PPI DE SALUTATION</h2>
@@ -309,6 +440,33 @@
     }
 }
 
+	function submitQuiz() {
+		const answers = {
+			q1: "b",
+			q2: "a",
+			q3: "a"
+		};
+
+		let score = 0;
+		const form = document.getElementById("quiz-form");
+		const resultDiv = document.getElementById("quiz-result");
+
+		for (const [question, correctAnswer] of Object.entries(answers)) {
+			const userAnswer = form.elements[question].value;
+			if (userAnswer === correctAnswer) {
+				score++;
+			}
+		}
+
+		resultDiv.style.display = "block";
+		resultDiv.innerHTML = `<p>Vous avez obtenu ${score} sur ${Object.keys(answers).length} bonnes réponses.</p>`;
+	}
+
+	function resetQuiz() {
+		const form = document.getElementById("quiz-form");
+		form.reset(); // Reset all form inputs
+		document.getElementById("quiz-result").style.display = "none"; // Hide the result
+	}
 	</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
