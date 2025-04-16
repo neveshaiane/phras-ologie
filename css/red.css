@@ -483,14 +483,14 @@ body {
 }
 
 .fh5co-lead {
-  font-size: 30px;
+  font-size: 15px;
   font-weight: 300;
-  color: #484c50;
+  color: #FA5555;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-lead {
-    font-size: 35px;
+    font-size: 20px;
   }
 }
 
@@ -834,7 +834,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   #fh5co-about .fh5co-lead {
-    font-size: 35px;
+    font-size: 20px;
   }
 }
 #fh5co-about .fh5co-sub-lead {
@@ -1360,7 +1360,7 @@ body {
 }
 
 .row-bottom-padded-lg {
-  padding-bottom: 7em;
+  padding-bottom: 3em;
 }
 @media screen and (max-width: 768px) {
   .row-bottom-padded-lg {
@@ -1369,7 +1369,7 @@ body {
 }
 
 .row-top-padded-lg {
-  padding-top: 7em;
+  padding-top: 3em;
 }
 @media screen and (max-width: 768px) {
   .row-top-padded-lg {
@@ -1378,16 +1378,16 @@ body {
 }
 
 .row-bottom-padded-md {
-  padding-bottom: 4em;
+  padding-bottom: 2em;
 }
 @media screen and (max-width: 768px) {
   .row-bottom-padded-md {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
   }
 }
 
 .row-top-padded-md {
-  padding-top: 4em;
+  padding-top: 1em;
 }
 @media screen and (max-width: 768px) {
   .row-top-padded-md {
