@@ -323,6 +323,44 @@ body {
   margin-left: 30px;
 }
 
+/* Dropdown menu style */
+#fh5co-header nav ul li.dropdown {
+  position: relative;
+}
+
+#fh5co-header nav ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #FA5555;
+  padding: 10px 0;
+  min-width: 160px;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+#fh5co-header nav ul li .dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+
+#fh5co-header nav ul li .dropdown-menu li a {
+  color: #2a2d36
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+#fh5co-header nav ul li .dropdown-menu li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show dropdown on hover */
+#fh5co-header nav ul li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 #fh5co-hero {
   background-color: transparent;
   background-size: cover;
