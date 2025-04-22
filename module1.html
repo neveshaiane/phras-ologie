@@ -153,16 +153,22 @@
 	
 	<div id="fh5co-page">
 		<section id="fh5co-header">
-			<div class="container">
-				<nav role="navigation">
-					<ul class="pull-left left-menu">
-						<li><a href="module1.html">Module 1</a></li>
-						<li><a href="module2.html">Module 2</a></li>
-						<li><a href="module3.html">Module 3</a></li>
-					</ul>
-					<h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>
-				</nav>
-			</div>
+		  <div class="container">
+			<nav role="navigation">
+			  <ul class="pull-left left-menu">
+				<li class="dropdown">
+				  <a href="module1.html">Politesse</a>
+				  <ul class="dropdown-menu">
+					<li><a href="module1.html#fh5co-projects">S'apprendre</a></li>
+					<li><a href="module1.html#fh5co-about">S'entraîner</a></li>
+				  </ul>
+				</li>
+				<li><a href="module2.html">Émotions</a></li>
+				<li><a href="module3.html">Accord/Dessacord</a></li>
+			  </ul>
+			  <h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>
+			</nav>
+		  </div>
 		</section>
 		<!-- #fh5co-header -->
 
@@ -178,18 +184,21 @@
 							<div class="fh5co-right-position">
 						-->
 						<div class="fh5co-center-position">
-							<h2 class="animate-box">Entre amis</h2>
+							<h2 class="animate-box">Politesse</h2>
 							<h3 class="animate-box">Apprenez à saluer, plaisanter, exprimer la surprise… et découvrez les expressions clés pour interagir dans un contexte familier.</h3>
-						</div>
+              <button class="btn btn-primary" onclick="document.getElementById('fh5co-projects').scrollIntoView({ behavior: 'smooth' })">S'apprendre</button>
+              <button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
+            </div>
 					</div>
 				</div>
 			</div>
-			<div class="fh5co-learn-more animate-box">
+			<!--<div class="fh5co-learn-more animate-box">
 				<a href="#" class="scroll-btn">
 					<span class="text">Découvrez nos capsules</span>
 					<span class="arrow"><i class="icon-chevron-down"></i></span>
 				</a>
 			</div>
+      -->
 		</section>
 					<!--
 						<div class="text-center">
@@ -228,9 +237,20 @@
 			</div>
 		</div>
 		-->
-	<div id="fh5co-about">
-
-			<div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px;">
+  <section id="fh5co-projects">
+    <section class="intro">
+      <div class="text-center">
+        <div class="video-container">
+          <div class="video-wrapper">
+            <iframe width="80%" height="400" src="https://www.youtube.com/embed/7vMhCj00-gM?si=3NttLvMbJJwri4kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+	
+  <div id="fh5co-about">
+		<div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px;">
 			<h3 style="margin-bottom: 8px;"> 🔴 Vidéos interactives</h3>
 			<p style="margin-left: 10px;">
 			  Cliquez sur une vidéo pour découvrir les phrases dans leur contexte naturel et vous entraîner en douceur.
@@ -241,7 +261,7 @@
 		<div class="container">
 			<div class="row row-bottom-padded-lg">
 				<div class="col-md-6">
-					<iframe src="https://ladigitale.dev/digiquiz/q/67fe5ae24923d" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="400" scrolling="no"></iframe>
+					<iframe src="https://ladigitale.dev/digiquiz/q/67fe5ae24923d" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="300"></iframe>
 				</div>
 				<div class="col-md-6">
 					<div class="fh5co-label animate-box">Situation : Accueil de la nouvelle voisine</div>
@@ -257,13 +277,13 @@
 					<p class="fh5co-sub-lead animate-box">Salut. C'est bon. Enchantée. C'est sympa. Tu me dis. Ça marche.</p>
 				</div>
 				<div class="col-md-6">
-          <iframe src="https://ladigitale.dev/digiquiz/q/67ff6c9529ad0" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="400" scrolling="no"></iframe>
+					<iframe src="https://ladigitale.dev/digiquiz/q/67ff6c9529ad0" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="300"></iframe>
 				</div>
 			</div>
 
 			<div class="row row-bottom-padded-lg">
 				<div class="col-md-6">
-					<iframe src="https://ladigitale.dev/digiquiz/q/67ff706f0e7fa" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="400" scrolling="no"></iframe>
+					<iframe src="https://ladigitale.dev/digiquiz/q/67ff706f0e7fa" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="300"></iframe>
 				</div>
 				<div class="col-md-6">
 					<div class="fh5co-label animate-box">Situation : Inviter un ami au téléphone (audio) </div>
@@ -277,6 +297,7 @@
 					Faites le quiz audio avec les phrases préfabriquées.
 				</p>
 			</div>
+    </div>
 			<div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;"><video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%"><source src="https://static.genially.com/resources/loader-default-rebranding.mp4" type="video/mp4" />Your browser does not support the video tag.</video><div id="67fe1a7b233afce0d6bed48f" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div></div><script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genially.com/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
 	<style>
   .drag-drop-container {
@@ -488,18 +509,12 @@
     alert('L\'activité a été réinitialisée.');
   });
 </script>
+			
+	
 			<footer id="fh5co-footer">
-      </div>
-      <div class="fh5co-copyright animate-box">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p><div>
-          </div>
-        </div>
-      </div>
 				<div class="container">
 					<div class="row row-bottom-padded-md">
+	
 						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
 							<div class="fh5co-footer-widget">
 								<ul class="fh5co-links">
@@ -509,20 +524,35 @@
 								</ul>
 							</div>
 						</div>
+	
 						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
 							<div class="fh5co-footer-widget">
-                <p>
-                  <p>PREFAB © 2025</p>
-                  <p>LIDILEM, GRENOBLE & ICAR, LYON</p>
-                  <a href="prefab">https://prefab.hypotheses.org/</a> <br>
-                </p>
+								<h3>Contactez-nous</h3>
+								<p>
+									<a href="mailto:info@freehtml5.co">info@freehtml5.co</a> <br>
+									<p>PREFAB © 2025</p>
+									<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
+								</p>
 							</div>
 						</div>
 	
 					</div>
+					
+				</div>
+				<div class="fh5co-copyright animate-box">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p><div>
+						</div>
+					</div>
+				</div>
 			</footer>
+			<!-- END #fh5co-footer -->
 		</div>
 		<!-- END #fh5co-page -->
+		
+		
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
