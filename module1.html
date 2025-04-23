@@ -126,6 +126,48 @@
     transform: scale(1.2); /* Augmentation de la taille */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre */
   }
+
+	/* Glossary styles */
+	#glossary {
+		display: none; /* Initially hidden */
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 300px;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		padding: 15px;
+		font-size: 14px;
+		overflow-y: auto;
+		max-height: 70vh;
+		z-index: 1000; /* Ensure it appears in front */
+	}
+
+	#glossary h3 {
+		margin-top: 0;
+		font-size: 16px;
+		color: #333;
+		text-align: center;
+	}
+
+	#glossary .close-btn {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background-color: #FA5555;
+		color: #fff;
+		border: none;
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		cursor: pointer;
+		font-size: 16px;
+		line-height: 25px;
+	}
 </style>
 	<!-- End demo purposes only -->
 
@@ -153,22 +195,22 @@
 	
 	<div id="fh5co-page">
 		<section id="fh5co-header">
-		  <div class="container">
-			<nav role="navigation">
-			  <ul class="pull-left left-menu">
-				<li class="dropdown">
-				  <a href="module1.html">Politesse</a>
-				  <ul class="dropdown-menu">
-					<li><a href="module1.html#fh5co-projects">S'apprendre</a></li>
-					<li><a href="module1.html#fh5co-about">S'entraîner</a></li>
-				  </ul>
-				</li>
-				<li><a href="module2.html">Émotions</a></li>
-				<li><a href="module3.html">Accord/Dessacord</a></li>
-			  </ul>
-			  <h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>
-			</nav>
-		  </div>
+			<div class="container">
+				<nav role="navigation">
+					<ul class="pull-left left-menu">
+						<li class="dropdown">
+							<a href="module1.html">Politesse</a>
+							<ul class="dropdown-menu">
+								<li><a href="module1.html#fh5co-projects">Apprendre</a></li>
+								<li><a href="module1.html#fh5co-about">S'entraîner</a></li>
+							</ul>
+						</li>
+						<li><a href="module2.html">Émotions</a></li>
+						<li><a href="module3.html">Accord/Dessacord</a></li>
+					</ul>
+					<h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>
+				</nav>
+			</div>
 		</section>
 		<!-- #fh5co-header -->
 
@@ -186,7 +228,7 @@
 						<div class="fh5co-center-position">
 							<h2 class="animate-box">Politesse</h2>
 							<h3 class="animate-box">Apprenez à saluer, plaisanter, exprimer la surprise… et découvrez les expressions clés pour interagir dans un contexte familier.</h3>
-              <button class="btn btn-primary" onclick="document.getElementById('fh5co-projects').scrollIntoView({ behavior: 'smooth' })">S'apprendre</button>
+              <button class="btn btn-primary" onclick="document.getElementById('fh5co-projects').scrollIntoView({ behavior: 'smooth' })">Apprendre</button>
               <button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
             </div>
 					</div>
@@ -250,12 +292,10 @@
   </section>
 	
   <div id="fh5co-about">
-		<div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px;">
+		<div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
 			<h3 style="margin-bottom: 8px;"> 🔴 Vidéos interactives</h3>
-			<p style="margin-left: 10px;">
-			  Cliquez sur une vidéo pour découvrir les phrases dans leur contexte naturel et vous entraîner en douceur.
-			</p>
-		  </div>
+			<button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+		</div>
 		  
 			
 		<div class="container">
@@ -510,48 +550,83 @@
   });
 </script>
 			
-	
-			<footer id="fh5co-footer">
+	<div id="glossary">
+		<button class="close-btn" onclick="toggleGlossary()">×</button>
+		<h3>Glossaire</h3>
+		<input type="text" id="glossary-search" placeholder="Rechercher..." onkeyup="filterGlossary()" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+		<ul id="glossary-list">
+			<li><strong>PPI</strong>: Phrases Préfabriquées des Interactions.</li>
+			<li><strong>Politesse</strong>: Expressions pour saluer, remercier, etc.</li>
+			<li><strong>Émotions</strong>: Phrases pour exprimer des sentiments.</li>
+			<li><strong>Accord/Désaccord</strong>: Formules pour exprimer une opinion.</li>
+			<li><strong>Contexte</strong>: Situation dans laquelle une phrase est utilisée.</li>
+		</ul>
+	</div>
+
+	<script>
+		function toggleGlossary() {
+			const glossary = document.getElementById('glossary');
+			if (glossary.style.display === 'none' || glossary.style.display === '') {
+				glossary.style.display = 'block'; // Show the glossary
+			} else {
+				glossary.style.display = 'none'; // Hide the glossary
+			}
+		}
+
+		function filterGlossary() {
+			const searchInput = document.getElementById('glossary-search').value.toLowerCase();
+			const glossaryItems = document.querySelectorAll('#glossary-list li');
+
+			glossaryItems.forEach(item => {
+				const text = item.textContent.toLowerCase();
+				if (text.includes(searchInput)) {
+					item.style.display = ''; // Show item
+				} else {
+					item.style.display = 'none'; // Hide item
+				}
+			});
+		}
+	</script>
+		<footer id="fh5co-footer">
+			<div class="container">
+				<div class="row row-bottom-padded-md">
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<ul class="fh5co-links">
+								<li><a href="#">À propos</a></li>
+								<li><a href="#">Credits</a></li>
+								<li><a href="#">Terms of Use</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Contactez-nous</h3>
+							<p>
+								<a href="mailto:info@freehtml5.co">info@freehtml5.co</a> <br>
+								<p>PREFAB © 2025</p>
+								<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
+							</p>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+			<div class="fh5co-copyright animate-box">
 				<div class="container">
-					<div class="row row-bottom-padded-md">
-	
-						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-							<div class="fh5co-footer-widget">
-								<ul class="fh5co-links">
-									<li><a href="#">À propos</a></li>
-									<li><a href="#">Credits</a></li>
-									<li><a href="#">Terms of Use</a></li>
-								</ul>
-							</div>
-						</div>
-	
-						<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-							<div class="fh5co-footer-widget">
-								<h3>Contactez-nous</h3>
-								<p>
-									<a href="mailto:info@freehtml5.co">info@freehtml5.co</a> <br>
-									<p>PREFAB © 2025</p>
-									<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
-								</p>
-							</div>
-						</div>
-	
-					</div>
-					
-				</div>
-				<div class="fh5co-copyright animate-box">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p><div>
-						</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p><div>
 					</div>
 				</div>
-			</footer>
-			<!-- END #fh5co-footer -->
-		</div>
-		<!-- END #fh5co-page -->
-		
+			</div>
+		</footer>
+<!-- END #fh5co-footer -->
+</div>
+<!-- END #fh5co-page -->
 		
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
