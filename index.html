@@ -72,36 +72,55 @@
 		<section id="fh5co-header">
 		  <div class="container">
 			<nav role="navigation">
-				<ul class="pull-left left-menu">
+				<ul class="menu">
 					<li class="dropdown">
-					  <a href="module1.html">Politesse</a>
+					  <a href="#">Aspects notionnels</a>
 					  <ul class="dropdown-menu">
-						<li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
-						<li><a href="module1.html#fh5co-about">Salutations</a></li>
+						
+						<li class="dropdown-sub">
+						  <a href="module1.html">Politesse ▸</a>
+						  <ul class="submenu">
+							<li><a href="module1.html#fh5co-about">Salutations</a></li>
+							<li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
+						  </ul>
+						</li>
+				  
+						<li class="dropdown-sub">
+						  <a href="module2.html">Émotions ▸</a>
+						  <ul class="submenu">
+							<li><a href="module2.html#fh5co-projects">Surprise / Etonnement</a></li>
+							<li><a href="module2.html#fh5co-about">Joie / Enthousiasme</a></li>
+							<li><a href="module2.html#fh5co-about">Colère / Résignation</a></li>
+							<li><a href="module2.html#fh5co-about">Reconfort / Encouragement</a></li>
+						  </ul>
+						</li>
+				  
+						<li class="dropdown-sub">
+						  <a href="module3.html">Discussions ▸</a>
+						  <ul class="submenu">
+							<li><a href="module3.html#fh5co-projects">Accord / Désaccord</a></li>
+							<li><a href="module3.html#fh5co-about">Négociation</a></li>
+						  </ul>
+						</li>
+				  
 					  </ul>
 					</li>
-					<li class="dropdown">
-					  <a href="module2.html">Emotions</a>
+				  	<li class="dropdown spaced">
+					  <a href="#">Aspects linguistiques</a>
 					  <ul class="dropdown-menu">
-						<li><a href="module2.html#fh5co-projects">Surprise</a></li>
-						<li><a href="module2.html#fh5co-about">Joie</a></li>
-						<li><a href="module2.html#fh5co-about">Colère</a></li>
+						<li><a href="linguistique1.html">Registre de langue</a></li>
+						<li><a href="linguistique2.html">Cooccurrence</a></li>
 					  </ul>
 					</li>
-					<li class="dropdown">
-					  <a href="module3.html">Discussions</a>
-					  <ul class="dropdown-menu">
-						<li><a href="module3.html#fh5co-projects">Accord/Désaccord</a></li>
-						<li><a href="module3.html#fh5co-about">Négociation</a></li>
-					  </ul>
-					</li>
+					<ul class="right-menu align-right">
+						<button style="margin: #FA5555; " class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+						<button class="infobulle"><img src="images/info.png" alt="Info" width="20px"></button>
+					</ul>
 				  </ul>
 			  <h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>			</nav>
-		  </div>
+			</div>
 		</section>
-	  
-		<!-- #fh5co-header -->
-
+	  	<!-- #fh5co-header -->
 		<section id="fh5co-hero" class="js-fullheight" style="background-image: url(images/hero_bg.jpg);" data-next="yes">
 			<div class="fh5co-overlay"></div>
 			<div class="container">
@@ -137,7 +156,7 @@
 				</div>
 				<section class="intro">
 					<div class="text-center">
-						<div class="video-container">
+						<div id="videointro" class="video-container">
 							<div class="video-wrapper">
 								<iframe width="80%" height="400" src="https://www.youtube.com/embed/7vMhCj00-gM?si=3NttLvMbJJwri4kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 							</div>
@@ -406,7 +425,6 @@
 							<ul class="fh5co-links">
 								<li><a href="#">À propos</a></li>
 								<li><a href="#">Credits</a></li>
-								<li><a href="#">Terms of Use</a></li>
 							</ul>
 						</div>
 					</div>
@@ -415,24 +433,13 @@
 						<div class="fh5co-footer-widget">
 							<h3>Contactez-nous</h3>
 							<p>
-								<a href="mailto:info@freehtml5.co">info@freehtml5.co</a> <br>
 								<p>PREFAB © 2025</p>
 								<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
+                <p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p>
 							</p>
 						</div>
 					</div>
-
 				</div>
-				
-			</div>
-			<div class="fh5co-copyright animate-box">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p><div>
-					</div>
-				</div>
-			</div>
 		</footer>
 		<!-- END #fh5co-footer -->
 	</div>
