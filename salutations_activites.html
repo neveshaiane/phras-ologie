@@ -1,42 +1,71 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js"> 
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Module 1 &mdash;</title>
+	<title>Activités</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
-
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	
-	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
-	<!-- Flexslider -->
 	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Icomoon Icon Fonts-->
 	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/magnific-popup.css">  
 	<link rel="stylesheet" href="css/bootstrap.css">
 
-	<!-- 
-	Default Theme Style 
-	You can change the style.css (default color purple) to one of these styles
-	-->
 	<link rel="stylesheet" href="css/red.css">
 
-	
+	<style>
+	/* Glossary styles */
+	#glossary {
+		display: none; /* Initially hidden */
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 300px;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		padding: 15px;
+		font-size: 14px;
+		overflow-y: auto;
+		max-height: 70vh;
+		z-index: 1000; /* Ensure it appears in front */
+	}
+
+	#glossary h3 {
+		margin-top: 0;
+		font-size: 16px;
+		color: #333;
+		text-align: center;
+	}
+
+	#glossary .close-btn {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background-color: #FA5555;
+		color: #fff;
+		border: none;
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		cursor: pointer;
+		font-size: 16px;
+		line-height: 25px;
+	}
+</style>
+	<!-- End demo purposes only -->
+
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -58,335 +87,147 @@
 
 	<!-- Loader -->
 	<div class="fh5co-loader"></div>
-	
 	<div id="fh5co-page">
-		<section id="fh5co-header">
-			<div class="container">
-				<nav role="navigation">
-					<ul class="pull-left left-menu">
-            <li class="dropdown">
-              <a href="module1.html">Politesse</a>
-              <ul class="dropdown-menu">
-                <li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
-                <li><a href="module1.html#fh5co-about">Salutations</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="module2.html">Emotions</a>
-              <ul class="dropdown-menu">
-                <li><a href="module2.html#fh5co-projects">Surprise</a></li>
-                <li><a href="module2.html#fh5co-about">Joie</a></li>
-                <li><a href="module2.html#fh5co-about">Colère</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="module3.html">Discussions</a>
-              <ul class="dropdown-menu">
-                <li><a href="module3.html#fh5co-projects">Accord/Désaccord</a></li>
-                <li><a href="module3.html#fh5co-about">Négociation</a></li>
-              </ul>
-            </li>
-          </ul>
-					</ul>
-					<h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>
-				</nav>
+		<section id="fh5co-header" background-color=transparent>
+		  <div class="container">
+			<nav role="navigation">
+				<ul class="menu">
+					<li class="dropdown">
+					  <a href="#">Aspects notionnels</a>
+					  <ul class="dropdown-menu">
+						
+						<li class="dropdown-sub">
+						  <a href="module1.html">Politesse ▸</a>
+						  <ul class="submenu">
+							<li><a href="module1.html#fh5co-about">Salutations</a></li>
+							<li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
+						  </ul>
+						</li>
+				  
+						<li class="dropdown-sub">
+						  <a href="module2.html">Émotions ▸</a>
+						  <ul class="submenu">
+							<li><a href="module2.html#fh5co-projects">Surprise / Etonnement</a></li>
+							<li><a href="module2.html#fh5co-about">Joie / Enthousiasme</a></li>
+							<li><a href="module2.html#fh5co-about">Colère / Résignation</a></li>
+							<li><a href="module2.html#fh5co-about">Reconfort / Encouragement</a></li>
+						  </ul>
+						</li>
+				  
+						<li class="dropdown-sub">
+						  <a href="module3.html">Discussions ▸</a>
+						  <ul class="submenu">
+							<li><a href="module3.html#fh5co-projects">Accord / Désaccord</a></li>
+							<li><a href="module3.html#fh5co-about">Négociation</a></li>
+						  </ul>
+						</li>
+				  
+					  </ul>
+					</li>
+				  	<li class="dropdown spaced">
+					  <a href="#">Aspects linguistiques</a>
+					  <ul class="dropdown-menu">
+						<li><a href="linguistique1.html">Registre de langue</a></li>
+						<li><a href="linguistique2.html">Cooccurrence</a></li>
+					  </ul>
+					</li>
 			</div>
 		</section>
 		<!-- #fh5co-header -->
 
+		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/learn.jpg);" weight= 80%>
+			<div class="fh5co-overlay"></div>
+			<div class="container">
+				<div class="fh5co-intro no-js-fullheight">
+					<div class="fh5co-intro-text">
+						<!-- 
+							INFO:
+							Change the class to 'fh5co-right-position' or 'fh5co-center-position' to change the layout position
+							Example:
+							<div class="fh5co-right-position">
+						-->
+						<div class="fh5co-center-position">
+							<h2 class="animate-box"></h2>
+              <div class="fh5co-center-position">
+                <!-- Bouton "Apprendre" -->
+                <button class="btn btn-primary" onclick="window.location.href='index.html#videointro'">Apprendre</button>
+                
+                <!-- Bouton "S'entraîner" -->
+                <button class="btn btn-primary" onclick="document.getElementById('fh5co-projects').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
+              </div>
+            </div>
+					</div>
+				</div>
+			</div>
+		</section>  
 
-  <section id="fh5co-projects">
+     <!-- Contenu principal -->
+     <section id="fh5co-projects">
+      <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+        <h3>🔴 Sensibilisation aux PPI</h3>
+        <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+      </div>
+
+      <!-- Activité 1 -->
+      <section class="intro">
+        <div class="text-center">
+          <p><strong>Activité 1.</strong> Connaissez-vous ces expressions ?</p>
+          <div class="video-container">
+            <iframe src="https://ladigitale.dev/digiquiz/q/681a624961457" allow="fullscreen; autoplay;" frameborder="0" width="50%" height="300"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activité 2 -->
+      <section class="intro">
+        <div class="text-center">
+          <p><strong>Activité 2.</strong> Texte à trous.</p>
+          <div class="video-container">
+            <iframe src="https://ladigitale.dev/digiquiz/q/681a13b99bacf" allow="fullscreen; autoplay;" frameborder="0" width="50%" height="850" style="overflow: hidden;"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Activité 3 -->
+      <div id="fh5co-about">
+        <div class="container">
+            <div class="row row-bottom-padded-lg">
+                <div class="col-md-6">
+                    <figure class="animate-box">
+                        <video src="video/fromagerie_salutation.mp4" controls class="img-fluid" style="width: 100%; height: auto; border-radius: 16px;"></video>
+                    </figure>
+                </div>
+                <div class="col-md-6">
+                    <figure class="animate-box">
+                        <iframe src="https://ladigitale.dev/digiquiz/q/681b5516e1c23" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="380"></iframe>
+                    </figure>
+                </div>
+            </div>
+    </div>
+
+      <section class="intro">
+        <div class="text-center">
+          <p><strong>Activité 3.</strong> Devinez la réponse.</p>
+          <div class="video-container">
+            <iframe src="https://ladigitale.dev/digiquiz/q/681b4d8524d81" allow="fullscreen; autoplay;" frameborder="0" width="50%" height="800"></iframe>
+          </div>
+        </div>
+      </section>
+
     <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-        <h3 style="margin-bottom: 8px;"> 🔴 Salutations d'ouverture</h3>
+        <h3 style="margin-bottom: 8px;"> 🔴 Salutations de clôture</h3>
         <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
     </div>
     <section class="intro">
-      <div class="text-center">
-        <p><strong>Activité 1.</strong> Regardez la vidéo interactive et répondez aux questions.</p>
-       
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe src="arrivee_h5p.html" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="500"></iframe>
+        <div class="text-center">
+            <p><strong>Activité ....</strong>Texte à trous.</p>
+            <div class="video-container">
+                <iframe src="https://ladigitale.dev/digiquiz/q/681b2100d62a2" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="500"></iframe>
             </div>
         </div>
-      </div>
     </section>
 
-
-  <section class="intro">
-    <div class="text-center">
-      <p><strong>Activité 2.</strong>Texte à trous.</p>
-      <div class="texttrous-container">
-        <div class="texttrous-wrapper">
-            <iframe src="https://ladigitale.dev/digiquiz/q/681a13b99bacf" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="1000"></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-</section>
-
-
-  
-	
-  <div id="fh5co-about">
-		<div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-			<h3 style="margin-bottom: 8px;"> 🔴 Salutations de clôture</h3>
-			<button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
-		</div>
-		  
-			
-		<div class="container">
-			<div class="row row-bottom-padded-lg">
-				<div class="col-md-6">
-					<iframe src="https://ladigitale.dev/digiquiz/q/67fe5ae24923d" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="300"></iframe>
-				</div>
-				<div class="col-md-6">
-					<div class="fh5co-label animate-box">Situation : Accueil de la nouvelle voisine</div>
-					<h2 class="fh5co-lead animate-box">Salutation et remerciement</h2>
-					<p class="fh5co-sub-lead animate-box">Salut. C'est bon. Enchantée. C'est sympa. Tu me dis. Ça marche.</p>
-				</div>
-			</div>
-
-			<div class="row row-bottom-padded-lg">
-				<div class="col-md-6">
-					<div class="fh5co-label animate-box">Situation : Accueillir des invités chez soi</div>
-					<h2 class="fh5co-lead animate-box">Salutation</h2>
-					<p class="fh5co-sub-lead animate-box">Salut. C'est bon. Enchantée. C'est sympa. Tu me dis. Ça marche.</p>
-				</div>
-				<div class="col-md-6">
-					<iframe src="https://ladigitale.dev/digiquiz/q/67ff6c9529ad0" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="300"></iframe>
-				</div>
-			</div>
-
-			<div class="row row-bottom-padded-lg">
-				<div class="col-md-6">
-					<iframe src="https://ladigitale.dev/digiquiz/q/67ff706f0e7fa" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="300"></iframe>
-				</div>
-				<div class="col-md-6">
-					<div class="fh5co-label animate-box">Situation : Inviter un ami au téléphone (audio) </div>
-					<h2 class="fh5co-lead animate-box">Salutation, acceptation</h2>
-					<p class="fh5co-sub-lead animate-box">Salut. C'est bon. Enchantée. C'est sympa. Tu me dis. Ça marche.</p>
-				</div>
-			</div>
-			<div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px;">
-				<h3 style="margin-bottom: 8px;"> 🔴 Quizz audio</h3>
-				<p style="margin-left: 10px;">
-					Faites le quiz audio avec les phrases préfabriquées.
-				</p>
-			</div>
-    </div>
-			<div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;"><video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%"><source src="https://static.genially.com/resources/loader-default-rebranding.mp4" type="video/mp4" />Your browser does not support the video tag.</video><div id="67fe1a7b233afce0d6bed48f" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div></div><script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genially.com/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
-	<style>
-  .drag-drop-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    padding: 10px;
-	width: 60%;
-  }
-
-  .drag-drop-wrapper {
-  display: flex;
-  align-items: flex-start; /* aligne le haut des blocs */
-  justify-content: center;
-  gap: 20px; /* espace entre la vidéo et les zones de texte */
-  width: 100%;
-}
-
-/* Ajouter une colonne pour les zones à droite */
-.drag-drop-right-panel {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-  .drag-drop-options {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
-    gap: 10px;
-    margin-bottom: 15px;
-    justify-content: center;
-  }
-
-  .drag-drop-item {
-    padding: 5px 10px;
-    background: #fff;
-    color: #FA5555;
-    font-weight: bold;
-    border: 2px solid #FA5555;
-    border-radius: 8px;
-    cursor: grab;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: center;
-  }
-
-  .drag-drop-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .drag-drop-zones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .drag-drop-zone {
-    width: calc(100% - 20px);
-    min-height: 75px;
-    padding: 20px;
-    background: #fff;
-    color: #FA5555;
-    border: 2px solid #FA5555; /* Bordure normale */
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
-  }
-
-  .drag-drop-zone.over {
-    background-color: #FFE5E5;
-    transform: scale(1.05);
-  }
-
-  button.drag-drop-correction-btn {
-    margin-top: 20px;
-    padding: 5px 10px;
-    background-color: #fff;
-    color: #FA5555;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
-  }
-
-  button.drag-drop-correction-btn:hover {
-    background-color: #FFE5E5;
-    transform: scale(1.2); /* Augmentation de la taille */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre */
-  }
-
-  .drag-drop-square {
-    border: 2px solid #FA5555;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    margin: 0 auto;
-  }
-</style>
-
-<script>
-  function showDragDrop() {
-    document.getElementById('drag-drop-section').style.display = 'block';
-  }
-
-  const items = document.querySelectorAll('.drag-drop-item');
-  const zones = document.querySelectorAll('.drag-drop-zone');
-  const optionsContainer = document.querySelector('.drag-drop-options');
-
-  items.forEach(item => {
-    item.addEventListener('dragstart', dragStart);
-  });
-
-  zones.forEach(zone => {
-    zone.addEventListener('dragover', dragOver);
-    zone.addEventListener('dragenter', dragEnter);
-    zone.addEventListener('dragleave', dragLeave);
-    zone.addEventListener('drop', drop);
-  });
-
-  let draggedItem = null;
-
-  function dragStart(e) {
-    draggedItem = e.target;
-    setTimeout(() => {
-      e.target.style.display = 'none';
-    }, 0);
-  }
-
-  function dragOver(e) {
-    e.preventDefault();
-  }
-
-  function dragEnter(e) {
-    e.preventDefault();
-    this.classList.add('over');
-  }
-
-  function dragLeave() {
-    this.classList.remove('over');
-  }
-
-  function drop() {
-    this.classList.remove('over');
-    const correctZoneId = correctAnswers[draggedItem.textContent];
-    if (this.id === correctZoneId) {
-      this.appendChild(draggedItem);
-      draggedItem.style.display = 'block';
-      draggedItem = null;
-    } else {
-      this.appendChild(draggedItem); // Leave the item in the incorrect zone
-      draggedItem.style.display = 'block';
-      draggedItem = null;
-    }
-  }
-
-  const correctAnswers = {
-    "Bonjour": "zone1",
-    "Salut": "zone1",
-    "Ça va ?": "zone1",
-    "Ça marche.": "zone3",
-    "C'est bon.": "zone3",
-    "Bonne journée.": "zone1",
-    "Pas de souci.": "zone3",
-    "Il est pour moi.": "zone3",
-    "Au revoir.": "zone1",
-	"Je retiens": "zone3",
-  };
-
-  document.getElementById('correction-btn').addEventListener('click', () => {
-    const items = document.querySelectorAll('.drag-drop-item');
-    let incorrectItems = [];
-
-    items.forEach(item => {
-      const correctZoneId = correctAnswers[item.textContent];
-      const currentZone = item.parentElement;
-
-      if (currentZone.id !== correctZoneId) {
-        incorrectItems.push(item.textContent);
-        // Move the item back to the options container
-        optionsContainer.appendChild(item);
-      }
-    });
-
-    if (incorrectItems.length > 0) {
-      alert(`Essaye encore pour les phrases suivantes : ${incorrectItems.join(', ')}`);
-    } else {
-      alert('Toutes les phrases sont correctes !');
-    }
-  });
-
-  document.getElementById('reset-btn').addEventListener('click', () => {
-    const items = document.querySelectorAll('.drag-drop-item');
-    items.forEach(item => {
-      optionsContainer.appendChild(item); // Move all items back to the options container
-    });
-    alert('L\'activité a été réinitialisée.');
-  });
-</script>
-			
+   
 	<div id="glossary">
 		<button class="close-btn" onclick="toggleGlossary()">×</button>
 		<h3>Glossaire</h3>
@@ -433,7 +274,6 @@
 							<ul class="fh5co-links">
 								<li><a href="#">À propos</a></li>
 								<li><a href="#">Credits</a></li>
-								<li><a href="#">Terms of Use</a></li>
 							</ul>
 						</div>
 					</div>
@@ -442,24 +282,13 @@
 						<div class="fh5co-footer-widget">
 							<h3>Contactez-nous</h3>
 							<p>
-								<a href="mailto:info@freehtml5.co">info@freehtml5.co</a> <br>
 								<p>PREFAB © 2025</p>
 								<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
+                <p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p>
 							</p>
 						</div>
 					</div>
-
 				</div>
-				
-			</div>
-			<div class="fh5co-copyright animate-box">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p><div>
-					</div>
-				</div>
-			</div>
 		</footer>
 <!-- END #fh5co-footer -->
 </div>
