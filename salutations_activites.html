@@ -177,6 +177,44 @@
         <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
       </div>
 
+	  <div id="glossary">
+		<button class="close-btn" onclick="toggleGlossary()">×</button>
+		<h3>Glossaire</h3>
+		<input type="text" id="glossary-search" placeholder="Rechercher..." onkeyup="filterGlossary()" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+		<ul id="glossary-list">
+			<li><strong>PPI</strong>: Phrases Préfabriquées des Interactions.</li>
+			<li><strong>Politesse</strong>: Expressions pour saluer, remercier, etc.</li>
+			<li><strong>Émotions</strong>: Phrases pour exprimer des sentiments.</li>
+			<li><strong>Accord/Désaccord</strong>: Formules pour exprimer une opinion.</li>
+			<li><strong>Contexte</strong>: Situation dans laquelle une phrase est utilisée.</li>
+		</ul>
+	</div>
+
+	<script>
+		function toggleGlossary() {
+			const glossary = document.getElementById('glossary');
+			if (glossary.style.display === 'none' || glossary.style.display === '') {
+				glossary.style.display = 'block'; // Show the glossary
+			} else {
+				glossary.style.display = 'none'; // Hide the glossary
+			}
+		}
+
+		function filterGlossary() {
+			const searchInput = document.getElementById('glossary-search').value.toLowerCase();
+			const glossaryItems = document.querySelectorAll('#glossary-list li');
+
+			glossaryItems.forEach(item => {
+				const text = item.textContent.toLowerCase();
+				if (text.includes(searchInput)) {
+					item.style.display = ''; // Show item
+				} else {
+					item.style.display = 'none'; // Hide item
+				}
+			});
+		}
+	</script>
+
       
       <section class="intro">
         <div class="text-left">
