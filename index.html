@@ -74,50 +74,49 @@
 			<nav role="navigation">
 				<ul class="menu">
 					<li class="dropdown">
-					  <a href="#">Aspects notionnels</a>
+					  <a href="#">Fonctions langagières</a>
 					  <ul class="dropdown-menu">
 						
 						<li class="dropdown-sub">
-						  <a href="module1.html">Politesse ▸</a>
+						  <a href="module1.html">Rituels sociaux ▸</a>
 						  <ul class="submenu">
-							<li><a href="module1.html#fh5co-about">Salutations</a></li>
-							<li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
+							<li><a href="module1.html#fh5co-about">Saluer</a></li>
+							<li><a href="module1.html#fh5co-projects">Remercier</a></li>
+							<li><a href="module1.html#fh5co-projects">S'excuser</a></li>
 						  </ul>
 						</li>
 				  
 						<li class="dropdown-sub">
-						  <a href="module2.html">Émotions ▸</a>
+						  <a href="module2.html">Exprimer une émotion ▸</a>
 						  <ul class="submenu">
-							<li><a href="module2.html#fh5co-projects">Surprise / Etonnement</a></li>
-							<li><a href="module2.html#fh5co-about">Joie / Enthousiasme</a></li>
-							<li><a href="module2.html#fh5co-about">Colère / Résignation</a></li>
-							<li><a href="module2.html#fh5co-about">Reconfort / Encouragement</a></li>
+							<li><a href="module2.html#fh5co-projects">Joie et Enthousiasme</a></li>
+							<li><a href="module2.html#fh5co-about">Reconfort et Encouragement</a></li>
+							<li><a href="module2.html#fh5co-about">Surprise, étonnement et incrédulité</a></li>
 						  </ul>
 						</li>
 				  
 						<li class="dropdown-sub">
-						  <a href="module3.html">Discussions ▸</a>
+						  <a href="module3.html">Indiquer son accord ▸</a>
 						  <ul class="submenu">
-							<li><a href="module3.html#fh5co-projects">Accord / Désaccord</a></li>
+							<li><a href="module3.html#fh5co-projects">Accord et désaccord</a></li>
 							<li><a href="module3.html#fh5co-about">Négociation</a></li>
 						  </ul>
 						</li>
-				  
 					  </ul>
 					</li>
 				  	<li class="dropdown spaced">
 					  <a href="#">Aspects linguistiques</a>
 					  <ul class="dropdown-menu">
-						<li><a href="linguistique1.html">Registre de langue</a></li>
-						<li><a href="linguistique2.html">Cooccurrence</a></li>
+						<li><a href="linguistique1.html">Registres et conditions d’emplois</a></li>
+						<li><a href="linguistique2.html">Combinatoire des PPI</a></li>
+						<li><a href="linguistique3.html">Aspects conversationnels</a></li>
+						<li><a href="linguistique4.html">Constructions syntaxiques</a></li>
 					  </ul>
 					</li>
 					<ul class="right-menu align-right">
 						<button style="margin: #FA5555; " class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
-						<button class="infobulle"><img src="images/info.png" alt="Info" width="20px"></button>
-					</ul>
+						<a href="apropos.html" class="btn btn-primary">A propos</a>
 				  </ul>
-			  <h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>			</nav>
 			</div>
 		</section>
 	  	<!-- #fh5co-header -->
@@ -158,10 +157,9 @@
 					<div class="text-center">
 						<div id="videointro" class="video-container">
 							<div class="video-wrapper">
-								<iframe width="80%" height="400" src="https://www.youtube.com/embed/7vMhCj00-gM?si=3NttLvMbJJwri4kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-							</div>
+						<iframe width="80%" height="400" src="video/Present_v2.mp4" frameborder="0" allow="picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 						</div>
-						<button class="btn btn-primary" onclick="window.location.href='introduction_activites.html'">Faire des activités</button>
+						<button class="btn btn-primary" onclick="window.location.href='introduction_activites.html#activite1'">Faire des activités</button>
 						<button class="btn btn-primary" onclick="openQuiz()">Commencer le quiz</button>
 					</div>
 
@@ -194,6 +192,7 @@
 					</div>
 				</section>
 				<style>
+					
 					.quiz-modal {
 						position: fixed;
 						top: 0;
@@ -294,125 +293,6 @@
 						document.getElementById("quiz-result").style.display = "none"; // Hide the result
 					}
 				</script>
-				<div class="show-transcription" onclick="toggleAnswer(this)">
-					<a href="#" class="scroll-btn">
-						<span class="text">Lire la transcription de la vidéo introductive</span>
-						<span class="arrow"><i class="icon-chevron-down"></i></span>
-					</a>
-				</div>
-				
-				<!-- Hidden content for transcription -->
-				<div class="transcription-content" style="display: none;">
-					<p><strong>Les phrases préfabriquées des interactions (PPI)</strong></p>
-					
-					<p><strong>🗣️ Ces phrases vous sont-elles familières ?</strong></p>
-					<p>Il fallait pas</p>
-					<p>C’est gentil !</p>
-					<p>On ne va pas se mentir</p>
-					<p>C’est bon !</p>
-					<p>Comment dirais-je ?</p>
-					
-					<p><strong>LES PPI</strong></p>
-					<p>👉 Les PPI sont des formules toutes faites qu’on utilise souvent quand on parle avec les autres, surtout dans des situations courantes.</p>
-					
-					
-					<p>Ce sont des phrases ou morceaux de phrases qu'on a l'habitude d'entendre et de répéter sans trop y réfléchir.</p>
-					
-					<p>On les emploie souvent spontanément parce qu’elles font partie des codes de la conversation.</p>
-					
-					<p><strong>Quelques fonctionnalités des PPI (saluer, remercier, négocier, proposer, inviter)</strong></p>
-					
-					<p>Assez souvent, une même PPI convient parfaitement à des contextes très différents mais peut ne pas avoir le même sens suivant son contexte.</p>
-					<p>Exemple : c’est bon.</p>
-					
-					<p><strong>Quels apports pour l’apprentissage ?</strong></p>
-					<p>Ces phrases sont pratiques et efficaces : elles sont déjà “prêtes à l’emploi”, donc on n’a pas besoin de chercher à chaque fois une nouvelle manière de dire les choses.</p>
-					
-					<p>Elles sont souvent utilisées et il y a beaucoup de PPI. Notre but, ce n’est pas d’apprendre par cœur, mais de vous aider à les reconnaître et à les comprendre. Comme ça, la prochaine fois que vous les entendrez, vous pourrez comprendre leur sens en fonction du contexte et vous dire : « C’est une phrase sympa », en ajoutant à votre vocabulaire aussi bien sa forme que son (ou ses) sens.</p>
-					</div>	
-				</div>
-			</section>
-		<!--
-				<section class="content">
-					<h2>PPI DE SALUTATION</h2>
-					<p>Observez les situations et repérez les PPI qui sont associés avec la salutation.</p>
-					<div class="videos">
-						<video width="560" height="315" controls>
-							<source src="/salutations_amis.mp4" type="video/mp4">
-							Votre navigateur ne supporte pas la lecture des vidéos.
-						</video>
-						<video width="560" height="315" controls>
-							<source src="/visite.mp4" type="video/mp4">
-							Votre navigateur ne supporte pas la lecture des vidéos.
-						</video>
-					</div>
-				</section>
-		-->
-		<!--
-				<div class="row">
-					
-					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="images/img_1.jpg" class="fh5co-project-item image-popup">
-							<img src="images/img_1.jpg" alt="Image" class="img-responsive">
-							<div class="fh5co-text">
-								<h2>Beautiful Sunrise</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="images/img_2.jpg" class="fh5co-project-item image-popup">
-							<img src="images/img_2.jpg" alt="Image" class="img-responsive">
-							<div class="fh5co-text">
-								<h2>Cute Little Dog</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="images/img_3.jpg" class="fh5co-project-item image-popup">
-							<img src="images/img_3.jpg" alt="Image" class="img-responsive">
-							<div class="fh5co-text">
-								<h2>A Wooden Bridge</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="images/img_4.jpg" class="fh5co-project-item image-popup">
-							<img src="images/img_4.jpg" alt="Image" class="img-responsive">
-							<div class="fh5co-text">
-								<h2>Puppy & I in the Farm</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="images/img_5.jpg" class="fh5co-project-item image-popup">
-							<img src="images/img_5.jpg" alt="Image" class="img-responsive">
-							<div class="fh5co-text">
-								<h2>A Big Wave of the Blue Sea</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-4 col-sm-6 col-xxs-12 animate-box">
-						<a href="images/img_6.jpg" class="fh5co-project-item image-popup">
-							<img src="images/img_6.jpg" alt="Image" class="img-responsive">
-							<div class="fh5co-text">
-								<h2>Foggy Pine Trees</h2>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia..</p>
-							</div>
-						</a>
-					</div>
-				-->	
-					
-				</div>
 			</div>
 		</section>
 		<!-- END #fh5co-projects -->
