@@ -84,56 +84,63 @@
 		<body class="boxed">	
 	-->
 	<body>
-
-	<!-- Loader -->
+<!-- Loader -->
 	<div class="fh5co-loader"></div>
+	
 	<div id="fh5co-page">
-		<section id="fh5co-header" background-color=transparent>
+		<section id="fh5co-header">
 		  <div class="container">
 			<nav role="navigation">
 				<ul class="menu">
 					<li class="dropdown">
-					  <a href="#">Aspects notionnels</a>
+					  <a href="#">Fonctions langagières</a>
 					  <ul class="dropdown-menu">
 						
 						<li class="dropdown-sub">
-						  <a href="module1.html">Politesse ▸</a>
+						  <a href="module1.html">Rituels sociaux ▸</a>
 						  <ul class="submenu">
-							<li><a href="module1.html#fh5co-about">Salutations</a></li>
-							<li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
+							<li><a href="module1.html#fh5co-about">Saluer</a></li>
+							<li><a href="module1.html#fh5co-projects">Remercier</a></li>
+							<li><a href="module1.html#fh5co-projects">S'excuser</a></li>
 						  </ul>
 						</li>
 				  
 						<li class="dropdown-sub">
-						  <a href="module2.html">Émotions ▸</a>
+						  <a href="module2.html">Exprimer une émotion ▸</a>
 						  <ul class="submenu">
-							<li><a href="module2.html#fh5co-projects">Surprise / Etonnement</a></li>
-							<li><a href="module2.html#fh5co-about">Joie / Enthousiasme</a></li>
-							<li><a href="module2.html#fh5co-about">Colère / Résignation</a></li>
-							<li><a href="module2.html#fh5co-about">Reconfort / Encouragement</a></li>
+							<li><a href="module2.html#fh5co-projects">Joie et Enthousiasme</a></li>
+							<li><a href="module2.html#fh5co-about">Reconfort et Encouragement</a></li>
+							<li><a href="module2.html#fh5co-about">Surprise, étonnement et incrédulité</a></li>
 						  </ul>
 						</li>
 				  
 						<li class="dropdown-sub">
-						  <a href="module3.html">Discussions ▸</a>
+						  <a href="module3.html">Indiquer son accord ▸</a>
 						  <ul class="submenu">
-							<li><a href="module3.html#fh5co-projects">Accord / Désaccord</a></li>
+							<li><a href="module3.html#fh5co-projects">Accord et désaccord</a></li>
 							<li><a href="module3.html#fh5co-about">Négociation</a></li>
 						  </ul>
 						</li>
-				  
 					  </ul>
 					</li>
 				  	<li class="dropdown spaced">
 					  <a href="#">Aspects linguistiques</a>
 					  <ul class="dropdown-menu">
-						<li><a href="linguistique1.html">Registre de langue</a></li>
-						<li><a href="linguistique2.html">Cooccurrence</a></li>
+						<li><a href="linguistique1.html">Registres et conditions d’emplois</a></li>
+						<li><a href="linguistique2.html">Combinatoire des PPI</a></li>
+						<li><a href="linguistique3.html">Aspects conversationnels</a></li>
+						<li><a href="linguistique4.html">Constructions syntaxiques</a></li>
 					  </ul>
 					</li>
+					<ul class="right-menu align-right">
+						<button style="margin: #FA5555; " class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+						<a href="apropos.html" class="btn btn-primary">A propos</a>
+				  </ul>
+				  					<ul class="center-menu align-items" 
+					id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
+					</ul>
 			</div>
 		</section>
-		<!-- #fh5co-header -->
 
 		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/learn.jpg);" weight= 80%>
 			<div class="fh5co-overlay"></div>
@@ -176,9 +183,18 @@
 <!-- Est-ce qu'on a besoin des titres-->
           <h4>⭕<span style="color:#FA5555">Activité 1.</span>Regardez la vidéo interactive et répondez aux questions.</h4>
           <div class="video-container">
-              <div class="video-wrapper">
-                <iframe src="arrivee_h5p.html" allow="fullscreen; autoplay;" frameborder="0" style="width: 100%; height: 420px; border-radius: 16px;"></iframe>
-              </div>
+                <iframe 
+				src="arrivee_h5p.html" 
+				allow="fullscreen; autoplay;" 
+				frameborder="0" 
+				style="
+					width: 640px;
+					height: 520px;
+					border-radius: 16px;
+					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+					overflow: hidden;
+				">
+				</iframe>
           </div>
           <p class="text-center">Cet extrait vidéo est issu de corpus FLEURON. Repéré le 7 mai 2025, à l’adresse https://fleuron.atilf.fr/</p>
         </div>
