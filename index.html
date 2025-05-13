@@ -117,6 +117,9 @@
 						<button style="margin: #FA5555; " class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
 						<a href="apropos.html" class="btn btn-primary">A propos</a>
 				  </ul>
+				  					<ul class="center-menu align-items" 
+					id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
+					</ul>
 			</div>
 		</section>
 	  	<!-- #fh5co-header -->
@@ -149,7 +152,6 @@
 			<div class="container">
 				<div class="row row-bottom-padded-md">
 					<div class="col-md-6 col-md-offset-3 text-center">
-						<h2 class="fh5co-lead animate-box">Qu'est-ce que cela signifie ?</h2>
 						<p class="fh5co-sub-lead animate-box">Découvrez le concept des phrases préfabriquées en vidéo. </p>
 					</div>
 				</div>
@@ -157,10 +159,15 @@
 					<div class="text-center">
 						<div id="videointro" class="video-container">
 							<div class="video-wrapper">
-						<iframe width="80%" height="400" src="video/Present_v2.mp4" frameborder="0" allow="picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+								<!-- Video cover -->
+								<div class="video-cover" onclick="playVideo()">
+									<img src="images/cover.png" alt="Video Cover" style="width: 100%; height: auto; cursor: pointer;">
+								</div>
 						</div>
-						<button class="btn btn-primary" onclick="window.location.href='introduction_activites.html#activite1'">Faire des activités</button>
-						<button class="btn btn-primary" onclick="openQuiz()">Commencer le quiz</button>
+						</div>
+						<button class="btn btn-primary" onclick="window.location.href='introduction_activites.html#activite1'">Lancer les activités</button>
+						<!-- Quiz modal 
+						<button class="btn btn-primary" onclick="openQuiz()">Commencer le quiz</button>-->
 					</div>
 
 					<!-- Quiz modal -->
@@ -191,6 +198,44 @@
 						</div>
 					</div>
 				</section>
+				
+	<div id="glossary">
+		<button class="close-btn" onclick="toggleGlossary()">×</button>
+		<h3>Glossaire</h3>
+		<input type="text" id="glossary-search" placeholder="Rechercher..." onkeyup="filterGlossary()" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+		<ul id="glossary-list">
+			<li><strong>PPI</strong>: Phrases Préfabriquées des Interactions.</li>
+			<li><strong>Politesse</strong>: Expressions pour saluer, remercier, etc.</li>
+			<li><strong>Émotions</strong>: Phrases pour exprimer des sentiments.</li>
+			<li><strong>Accord/Désaccord</strong>: Formules pour exprimer une opinion.</li>
+			<li><strong>Contexte</strong>: Situation dans laquelle une phrase est utilisée.</li>
+		</ul>
+	</div>
+
+	<script>
+		function toggleGlossary() {
+			const glossary = document.getElementById('glossary');
+			if (glossary.style.display === 'none' || glossary.style.display === '') {
+				glossary.style.display = 'block'; // Show the glossary
+			} else {
+				glossary.style.display = 'none'; // Hide the glossary
+			}
+		}
+
+		function filterGlossary() {
+			const searchInput = document.getElementById('glossary-search').value.toLowerCase();
+			const glossaryItems = document.querySelectorAll('#glossary-list li');
+
+			glossaryItems.forEach(item => {
+				const text = item.textContent.toLowerCase();
+				if (text.includes(searchInput)) {
+					item.style.display = ''; // Show item
+				} else {
+					item.style.display = 'none'; // Hide item
+				}
+			});
+		}
+	</script>
 				<style>
 					
 					.quiz-modal {
@@ -292,6 +337,15 @@
 						form.reset(); // Reset all form inputs
 						document.getElementById("quiz-result").style.display = "none"; // Hide the result
 					}
+
+			function playVideo() {
+				const videoContainer = document.getElementById('videointro');
+				videoContainer.innerHTML = `
+					<div class="video-wrapper">
+						<iframe width="80%" height="400" src="video/Present_v2.mp4" frameborder="0" allow="picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+				`;
+				}
 				</script>
 			</div>
 		</section>
@@ -304,8 +358,8 @@
 					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
 						<div class="fh5co-footer-widget">
 							<ul class="fh5co-links">
-								<li><a href="#">À propos</a></li>
-								<li><a href="#">Credits</a></li>
+								<li><a href="apropos.html">À propos</a></li>
+								<li><a href="credits.html">Credits</a></li>
 							</ul>
 						</div>
 					</div>
