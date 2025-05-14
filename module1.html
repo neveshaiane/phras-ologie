@@ -198,29 +198,24 @@
 			<div class="container">
 				<nav role="navigation">
 					<ul class="pull-left left-menu">
-            <li class="dropdown">
-              <a href="module1.html">Politesse</a>
-              <ul class="dropdown-menu">
-                <li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
-                <li><a href="module1.html#fh5co-about">Salutations</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="module2.html">Emotions</a>
-              <ul class="dropdown-menu">
-                <li><a href="module2.html#fh5co-projects">Surprise</a></li>
-                <li><a href="module2.html#fh5co-about">Joie</a></li>
-                <li><a href="module2.html#fh5co-about">Colère</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="module3.html">Discussions</a>
-              <ul class="dropdown-menu">
-                <li><a href="module3.html#fh5co-projects">Accord/Désaccord</a></li>
-                <li><a href="module3.html#fh5co-about">Négociation</a></li>
-              </ul>
-            </li>
-          </ul>
+						<li class="dropdown">
+							<a href="module1.html">Politesse</a>
+							<ul class="dropdown-menu">
+								<li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
+								<li><a href="module1.html#fh5co-about">Salutations</a></li>
+							</ul>
+						</li>
+						<li><a href="module2.html">Émotions</a></li>
+            <ul class="dropdown-menu">
+              <li><a href="module2.html#fh5co-projects">Surprise</a></li>
+              <li><a href="module2.html#fh5co-about">Joie</a></li>
+              <li><a href="module2.html#fh5co-about">Colère</a></li>
+            </ul>
+						<li><a href="module3.html">Discussions</a></li>
+            <ul class="dropdown-menu">
+              <li><a href="module3.html#fh5co-projects">Accord/Désaccord</a></li>
+              <li><a href="module.html#fh5co-about">Négociation</a></li>
+            </ul>
 					</ul>
 					<h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>
 				</nav>
@@ -297,9 +292,12 @@
     <section class="intro">
       <div class="text-center">
         <div class="video-container">
-          <div class="video-wrapper">
-            <iframe width="80%" height="400" src="https://www.youtube.com/embed/7vMhCj00-gM?si=3NttLvMbJJwri4kT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
+			<div class="video-wrapper">
+				<!-- Video cover -->
+					<div id="videoouverture" class="video-cover" onclick="playVideo()">
+						<img src="images/ouverturecover.png" alt="Video Cover" style="width: 100%; height: auto; cursor: pointer;">
+					</div>
+			</div>
         </div>
       </div>
     </section>
@@ -465,6 +463,16 @@
 </style>
 
 <script>
+
+	function playVideo() {
+		const videoContainer = document.getElementById('videoouverture');
+			videoContainer.innerHTML = `
+				<div class="video-wrapper">
+					<iframe width="80%" height="400" src="video/ouverture.mp4" frameborder="0" allow="picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+				`;
+				}
+
   function showDragDrop() {
     document.getElementById('drag-drop-section').style.display = 'block';
   }
