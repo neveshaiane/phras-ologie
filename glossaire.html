@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Glossaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/red.css">
+    <style>
+        /* Glossary styles */
+        #glossary {
+            display: block;
+            position: relative;
+            margin: 20px auto;
+            width: 80%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            font-size: 14px;
+            overflow-y: auto;
+            max-height: 70vh;
+        }
+
+        #glossary h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+        }
+
+        #glossary .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #FA5555;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 25px;
+        }
+
+        #glossary-search {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #glossary-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #glossary-list li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="glossary">
+        <h3>Glossaire</h3>
+        <input type="text" id="glossary-search" placeholder="Rechercher..." onkeyup="filterGlossary()">
+        <ul id="glossary-list">
+            <li><strong>PPI</strong>: Phrases Préfabriquées des Interactions.</li>
+            <li><strong>Politesse</strong>: Expressions pour saluer, remercier, etc.</li>
+            <li><strong>Émotions</strong>: Phrases pour exprimer des sentiments.</li>
+            <li><strong>Accord/Désaccord</strong>: Formules pour exprimer une opinion.</li>
+            <li><strong>Contexte</strong>: Situation dans laquelle une phrase est utilisée.</li>
+        </ul>
+    </div>
+
+    <script>
+        function filterGlossary() {
+            const searchInput = document.getElementById('glossary-search').value.toLowerCase();
+            const glossaryItems = document.querySelectorAll('#glossary-list li');
+
+            glossaryItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchInput)) {
+                    item.style.display = ''; // Show item
+                } else {
+                    item.style.display = 'none'; // Hide item
+                }
+            });
+        }
+    </script>
+    	<script>
+	document.querySelectorAll('.dropdown > a').forEach(function(link) {
+		link.addEventListener('click', function(e) {
+		e.preventDefault();
+		const parent = link.parentElement;
+		parent.classList.toggle('open');
+		});
+	});
+
+	document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
+		link.addEventListener('click', function(e) {
+		e.preventDefault();
+		const parent = link.parentElement;
+		parent.classList.toggle('open');
+		});
+	});
+	</script>
+</body>
+</html>

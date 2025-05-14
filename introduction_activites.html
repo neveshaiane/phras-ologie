@@ -21,49 +21,6 @@
 
 	<link rel="stylesheet" href="css/red.css">
 
-	<style>
-	/* Glossary styles */
-	#glossary {
-		display: none; /* Initially hidden */
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 300px;
-		background-color: #fff;
-		border: 1px solid #ddd;
-		border-radius: 8px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		padding: 15px;
-		font-size: 14px;
-		overflow-y: auto;
-		max-height: 70vh;
-		z-index: 1000; /* Ensure it appears in front */
-	}
-
-	#glossary h3 {
-		margin-top: 0;
-		font-size: 16px;
-		color: #333;
-		text-align: center;
-	}
-
-	#glossary .close-btn {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		background-color: #FA5555;
-		color: #fff;
-		border: none;
-		border-radius: 50%;
-		width: 25px;
-		height: 25px;
-		text-align: center;
-		cursor: pointer;
-		font-size: 16px;
-		line-height: 25px;
-	}
-</style>
 	<!-- End demo purposes only -->
 
 
@@ -95,7 +52,6 @@
 					<li class="dropdown">
 					  <a href="#">Fonctions langagières</a>
 					  <ul class="dropdown-menu">
-						
 						<li class="dropdown-sub">
 						  <a href="module1.html">Rituels sociaux ▸</a>
 						  <ul class="submenu">
@@ -132,6 +88,13 @@
 						<li><a href="linguistique4.html">Constructions syntaxiques</a></li>
 					  </ul>
 					</li>
+					<ul class="right-menu align-right">
+						<button style="margin: #FA5555; " class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+						<a href="apropos.html" class="btn btn-primary">A propos</a>
+				  </ul>
+				  	<ul class="center-menu align-items" 
+					id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
+					</ul>
 			</div>
 		</section>
 		<!-- #fh5co-header -->
@@ -166,7 +129,7 @@
      <div id="fh5co-projects">
       <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
         <h3>🔴 Sensibilisation aux PPI</h3>
-        <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+        <button class="btn btn-primary" onclick="window.location.href='glossaire.html'">Glossaire</button>
       </div>
 	  </div>
 
@@ -224,6 +187,23 @@
 				}
 			});
 		}
+	</script>
+		<script>
+	document.querySelectorAll('.dropdown > a').forEach(function(link) {
+		link.addEventListener('click', function(e) {
+		e.preventDefault();
+		const parent = link.parentElement;
+		parent.classList.toggle('open');
+		});
+	});
+
+	document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
+		link.addEventListener('click', function(e) {
+		e.preventDefault();
+		const parent = link.parentElement;
+		parent.classList.toggle('open');
+		});
+	});
 	</script>
 		<footer id="fh5co-footer">
 			<div class="container">

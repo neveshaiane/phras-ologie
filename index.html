@@ -67,7 +67,6 @@
 	
 	<!-- Loader -->
 	<div class="fh5co-loader"></div>
-	
 	<div id="fh5co-page">
 		<section id="fh5co-header">
 		  <div class="container">
@@ -76,7 +75,6 @@
 					<li class="dropdown">
 					  <a href="#">Fonctions langagières</a>
 					  <ul class="dropdown-menu">
-						
 						<li class="dropdown-sub">
 						  <a href="module1.html">Rituels sociaux ▸</a>
 						  <ul class="submenu">
@@ -116,10 +114,10 @@
 					<ul class="right-menu align-right">
 						<button style="margin: #FA5555; " class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
 						<a href="apropos.html" class="btn btn-primary">A propos</a>
-				  </ul>
-				  					<ul class="center-menu align-items" 
-					id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
-					</ul>
+				  </ul>  
+				<ul class="center-menu align-items" 
+				id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
+				</ul>
 			</div>
 		</section>
 	  	<!-- #fh5co-header -->
@@ -128,14 +126,8 @@
 			<div class="container">
 				<div class="fh5co-intro js-fullheight">
 					<div class="fh5co-intro-text">
-						<!-- 
-							INFO:
-							Change the class to 'fh5co-right-position' or 'fh5co-center-position' to change the layout position
-							Example:
-							<div class="fh5co-right-position">
-						-->
 						<div class="fh5co-left-position">
-							<h2 class="animate-box">Les phrases préfabriquées des interactions</h2>
+							<h3 class="animate-box" style="font-size: 5.2rem; left: auto; text-align: leftr; line-height: 1.5;">Les phrases<br>préfabriquées<br>des interactions</h3>
 						</div>
 					</div>
 				</div>
@@ -165,12 +157,6 @@
 								</div>
 						</div>
 						</div>
-						<p>
-							La vidéo contient des extraits issus des corpus 
-							<a href="http://clapi.icar.cnrs.fr/V3_Accueil.php?interface_langue=FR" target="_blank" rel="noopener noreferrer">CLAPI</a> 
-							et 
-							<a href="https://www.ortolang.fr/market/corpora/mpf" target="_blank" rel="noopener noreferrer">MPF</a>.
-							</p>
 						<button class="btn btn-primary" onclick="window.location.href='introduction_activites.html#activite1'">Lancer les activités</button>
 						<!-- Quiz modal 
 						<button class="btn btn-primary" onclick="openQuiz()">Commencer le quiz</button>-->
@@ -217,6 +203,24 @@
 			<li><strong>Contexte</strong>: Situation dans laquelle une phrase est utilisée.</li>
 		</ul>
 	</div>
+	
+	<script>
+	document.querySelectorAll('.dropdown > a').forEach(function(link) {
+		link.addEventListener('click', function(e) {
+		e.preventDefault();
+		const parent = link.parentElement;
+		parent.classList.toggle('open');
+		});
+	});
+
+	document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
+		link.addEventListener('click', function(e) {
+		e.preventDefault();
+		const parent = link.parentElement;
+		parent.classList.toggle('open');
+		});
+	});
+	</script>
 
 	<script>
 		function toggleGlossary() {
@@ -364,7 +368,7 @@
 					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
 						<div class="fh5co-footer-widget">
 							<ul class="fh5co-links">
-								<li><a href="apropos.html">À propos</a></li>
+								<li><a href="apropos.html">A propos</a></li>
 								<li><a href="credits.html">Credits</a></li>
 							</ul>
 						</div>
