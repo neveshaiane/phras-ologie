@@ -12,6 +12,15 @@
 *
 * ======================================================= */
 .menu,
+/* Pas de changement ici pour la base */
+/*# sourceMappingURL=red.css.map */
+ul.menu > li > a {
+    font-size: 1.5rem; /* Taille de police augmentée */
+    font-weight: bold; /* Texte en gras */
+    text-decoration: none; /* Supprime le soulignement */
+    color: #004080; /* Couleur du texte */
+}
+
 .menu ul {
   list-style: none;
   padding: 0;
@@ -24,42 +33,41 @@
 }
 
 .spaced {
-  margin-left: 50px; /* Ajuste la valeur comme tu veux */
+  margin-left: 50px;
 }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  background: #f9f9f9;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  top: 100%;
-  left: 0;
-  z-index: 1000;
+    display: none; /* Masque le menu déroulant par défaut */
+    position: absolute;
+    background: #f9f9f9; /* Couleur de fond corrigée */
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre corrigée */
+    top: 100%;
+    left: 0;
+    z-index: 1000;
 }
 
-.dropdown:hover > .dropdown-menu {
-  display: block;
+.dropdown.open > .dropdown-menu {
+    display: block; /* Affiche le menu déroulant lorsqu'il est ouvert */
 }
 
 .dropdown-sub {
   position: relative;
 }
 
-.dropdown-sub > .submenu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background: #FA5555;
-  padding: 10px;
-  white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #FA5555;
+    padding: 10px;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.dropdown-sub:hover > .submenu {
-  display: inline-block;
-  float: left;
+.dropdown-sub.open > .submenu {
+    display: block; /* Affiche le sous-menu lorsqu'il est ouvert */
 }
 
 .custom-right {
@@ -154,6 +162,9 @@ h1, h2, h3, h4, h5, h6 {
   background: #FA5555;
   color: #fff;
   border: 2px solid #FA5555;
+  padding: 10px 20px; /* Ajout de la propriété manquante */
+  display: inline-block; /* Correction de l'affichage */
+  text-decoration: none; /* Supprime le soulignement */
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #fb6e6e !important;
@@ -438,14 +449,14 @@ body {
 }
 
 .dropdown-menu {
-  display: none; /* Cache les sous-menus par défaut */
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    display: none; /* Cache les sous-menus par défaut */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .dropdown.open > .dropdown-menu {
-  display: block; /* Affiche le sous-menu lorsque la classe "open" est ajoutée */
+    display: block; /* Affiche le sous-menu lorsque la classe "open" est ajoutée */
 }
 #fh5co-header nav ul li.dropdown {
   position: relative;
@@ -1650,6 +1661,6 @@ body {
 .show-transcription {
   display: flex;
   justify-content: center;
-}  
+}
 
-/*# sourceMappingURL=red.css.map */
+
