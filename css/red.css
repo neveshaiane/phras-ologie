@@ -1596,5 +1596,16 @@ ul.right-menu.align-right a.btn.btn-primary:hover {
   border-color: #fb6e6e !important;
 }
 
+/* Désactive visuellement les liens de menu sans page */
+.btn-disabled {
+  pointer-events: none;
+  color: #f0eaea !important;
+  background: #f77d7d !important;
+  border: none !important;
+  cursor: not-allowed !important;
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
 
 
