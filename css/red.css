@@ -186,6 +186,8 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
   margin-left: 10px;
 }
+
+
 /* fin test */
 
 .form-control {
@@ -352,9 +354,11 @@ body {
 }
 #fh5co-header nav ul.left-menu li {
   margin-right: 30px;
+  
 }
 #fh5co-header nav ul.right-menu li {
   margin-left: 30px;
+  
 }
 
 /* Dropdown menu style */
@@ -1606,6 +1610,143 @@ ul.right-menu.align-right a.btn.btn-primary:hover {
   opacity: 0.7;
   text-decoration: line-through;
 }
+
+/* Aligne les boutons utilitaires à droite et en haut, sur la même ligne */
+.right-menu.align-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center vertically for perfect alignment */
+  justify-content: flex-end;
+  gap: 12px; /* Slightly more space for clarity */
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  z-index: 20;
+}
+#btn-glossaire, #btn-apropos {
+  margin: 0;
+  padding: 8px 18px;
+  font-size: 1rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .right-menu.align-right {
+    position: static;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 100%;
+  }
+  #btn-glossaire, #btn-apropos {
+    font-size: 0.95rem;
+    padding: 7px 10px;
+    height: 36px;
+  }
+}
+
+/* Harmonize utility buttons (Glossaire, A propos, Commencer) */
+#btn-glossaire, #btn-apropos {
+  display: inline-block;
+  background: #FA5555 !important;
+  color: #fff !important;
+  border: 2px solid #FA5555 !important;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 22px !important;
+  height: 44px;
+  line-height: 22px;
+  margin: 0;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Responsive: stack utility buttons on mobile */
+@media (max-width: 600px) {
+  .right-menu.align-right {
+    flex-direction: column;
+    align-items: flex-end;
+    right: 10px;
+    top: 5px;
+    gap: 6px;
+  }
+  #btn-glossaire, #btn-apropos {
+    width: 100%;
+    min-width: 120px;
+    font-size: 15px;
+    padding: 10px 0 !important;
+    height: auto;
+  }
+}
+
+#btn-commencer
+{
+  margin-top: 30px; /* Ajoute 20px d'espace à gauche du bouton */
+}
+
+/* Fix .right-menu.align-right alignment for all buttons */
+.right-menu.align-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  z-index: 20;
+}
+
+/* Remove obsolete/duplicate selectors for .right-menu.align-right */
+ul.right-menu.align-right .btn.btn-primary,
+ul.right-menu.align-right a.btn.btn-primary,
+ul.right-menu.align-right .btn.btn-primary:hover,
+ul.right-menu.align-right a.btn.btn-primary:hover {
+  background: unset !important;
+  color: unset !important;
+  border: unset !important;
+}
+
+/* Remove test/obsolete margin for #btn-glossaire, #btn-apropos */
+#btn-glossaire, #btn-apropos {
+  margin-left: 0;
+}
+
+/* Fix .btn-disabled for utility buttons */
+.btn-disabled {
+  pointer-events: none;
+  color: #f0eaea !important;
+  background: #f77d7d !important;
+  border: none !important;
+  cursor: not-allowed !important;
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+/* If Commencer is fixed at bottom right */
+#btn-commencer.fixed-bottom {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(250,85,85,0.15);
+}
+@media (max-width: 600px) {
+  #btn-commencer.fixed-bottom {
+    bottom: 10px;
+    right: 10px;
+    width: calc(100vw - 40px);
+    min-width: 0;
+    font-size: 16px;
+    padding: 12px 0 !important;
+  }
+}
+
 
 
 
