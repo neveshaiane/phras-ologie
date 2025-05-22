@@ -111,25 +111,17 @@
 							Example:
 							<div class="fh5co-right-position">
 						-->
-						<div class="fh5co-center-position">
-							<h2 class="animate-box"></h2>
-              <div class="fh5co-center-position">
-                <!-- Bouton "Apprendre" -->
-                <button class="btn btn-primary" onclick="window.location.href='index.html#videointro'">Apprendre</button>
-                
-                <!-- Bouton "S'entraîner" -->
-                <button class="btn btn-primary" onclick="document.getElementById('fh5co-projects').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
-              </div>
-            </div>
+						<!-- a modifier peut-être-->
+						<div style="width: 100%; display: flex; justify-content: center; margin: 32px 0 0 0;">
+						<button class="btn btn-primary" onclick="document.getElementById('videointro').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
 					</div>
 				</div>
 			</div>
 		</section>
-
      <!-- Contenu principal -->
      <div id="fh5co-projects">
       <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-        <h2>🔴 Sensibilisation aux PPI</h2> </div>
+        <h2>🔴 Sensibilisation aux formules toutes faites</h2> </div>
 			<div id="videointro" class="video-container">
 			<div class="video-wrapper">
 			<!-- Video cover -->
@@ -199,6 +191,15 @@
 			<li><strong>Contexte</strong>: Situation dans laquelle une phrase est utilisée.</li>
 		</ul>
 	</div>
+	</div>
+			<div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px;">
+				<h3 style="margin-bottom: 8px;"> 🔴 Quizz audio</h3>
+				<p style="margin-left: 10px;">
+					Faites le quiz audio avec les phrases préfabriquées.
+				</p>
+			</div>
+    </div>
+			<div class="container-wrapper-genially" style="position: relative; min-height: 400px; max-width: 100%;"><video class="loader-genially" autoplay="autoplay" loop="loop" playsinline="playsInline" muted="muted" style="position: absolute;top: 45%;left: 50%;transform: translate(-50%, -50%);width: 80px;height: 80px;margin-bottom: 10%"><source src="https://static.genially.com/resources/loader-default-rebranding.mp4" type="video/mp4" />Your browser does not support the video tag.</video><div id="67fe1a7b233afce0d6bed48f" class="genially-embed" style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div></div><script>(function (d) { var js, id = "genially-embed-js", ref = d.getElementsByTagName("script")[0]; if (d.getElementById(id)) { return; } js = d.createElement("script"); js.id = id; js.async = true; js.src = "https://view.genially.com/static/embed/embed.js"; ref.parentNode.insertBefore(js, ref); }(document));</script>
 
 	<!-- Zone modale pour la transcription -->
 <div id="transcription-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
