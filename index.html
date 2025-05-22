@@ -69,6 +69,7 @@
 	<div class="fh5co-loader"></div>
 	<div id="fh5co-page">
 		<section id="fh5co-header">
+
 		  <div class="container">
 			<nav role="navigation">
 				<ul class="menu">
@@ -111,11 +112,8 @@
 						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
 					  </ul>
 					</li>
-					<ul style="top:-40px;" class="right-menu align-right">
-						<button id="btn-glossaire" style="margin: #FA5555; " class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
-						<a id="btn-apropos" href="apropos.html" class="btn btn-primary">A propos</a>
-				  </ul>  
-				</li>
+				</ul>
+				<!-- BOUTONS UTILES EN HAUT À DROITE, HORS DU MENU PRINCIPAL -->
 				<ul style="top:300px;">					
 				  <a id="btn-commencer" href="introduction_activites.html" class="btn btn-primary">Commencer</a>
 				</li>
@@ -123,6 +121,12 @@
 				<ul class="center-menu align-items" 
 				id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
 				</ul>
+				
+					<!-- Remplacer la mauvaise balise <ul> par un <div> pour les boutons utilitaires -->
+					<div class="right-menu align-right">
+					  <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+					  <a id="btn-apropos" href="apropos.html" class="btn btn-primary">A propos</a>
+					</div>
 			</div>
 		</section>
 	  	<!-- #fh5co-header -->
@@ -132,67 +136,108 @@
 				<div class="fh5co-intro js-fullheight">
 					<div class="fh5co-intro-text">
 						<div class="fh5co-left-position">
-							<h3 class="animate-box" style="font-size: 5.2rem; left: auto; text-align: leftr; line-height: 1.5;">Les phrases<br>préfabriquées<br>des interactions</h3>
+							<h3 class="animate-box" style="font-size: 5.2rem; left: auto; text-align: leftr; line-height: 1.2;">Les phrases<br>préfabriquées<br>des interactions</h3>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="fh5co-learn-more animate-box" style="display: flex; justify-content: space-between; align-items: center;">
 				<a href="#" class="scroll-btn">
-					<span class="text">En savoir plus</span>
+					<span class="text">Découvrir le parcours</span>
 					<span class="arrow"><i class="icon-chevron-down"></i></span>
 				</a>
 			</div>
 		</section>
-		<!-- END #fh5co-hero -->
-		<section id="fh5co-projects">
-			<div class="container">
-				<div class="row row-bottom-padded-md">
-					<div class="col-md-6 col-md-offset-3 text-center">
-						<p class="fh5co-sub-lead animate-box">Découvrez le concept des phrases préfabriquées en vidéo. </p>
-					</div>
+
+		
+		<section id="fh5co-features-3">
+            <div class="container">
+                <div class="row">
+                    <!-- Colonne 1 -->
+                    <div class="col-md-6">
+                        <div class="fh5co-feature animate-box">
+                            <div class="fh5co-icon"><i class="icon-toggle"></i></div>
+                            <div class="fh5co-text">
+                                <h3>1. Qu’est-ce qu’une phrase toute faite ?</h3>
+                                <ul>
+                                    <li>Une vidéo qui présente ce que sont les phrases toutes faites</li>
+                                    <li>Activités – introduction aux phrases toutes faites</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="fh5co-feature animate-box">
+                            <div class="fh5co-icon"><i class="icon-toggle"></i></div>
+                            <div class="fh5co-text">
+                                <h3>2. Être poli·e en français</h3>
+                                <ul>
+                                    <li>Dire bonjour</li>
+                                    <li>Activités – dire bonjour</li>
+                                    <li>Dire au revoir</li>
+                                    <li>Activités – dire au revoir</li>
+                                    <li>Utiliser les bons mots selon les situations (contexte)</li>
+                                    <li>Activités – contexte d'emploi</li>
+									<li>Remercier : au-delà du simple “merci”</li>
+									<li>Activités – remercier</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Colonne 2 -->
+                    <div class="col-md-6">
+                        <div class="fh5co-feature animate-box">
+                            <div class="fh5co-icon"><i class="icon-toggle"></i></div>
+                            <div class="fh5co-text">
+                                <h3>3.  Exprimer ses émotions</h3>
+                                <ul>
+                                    <li>Surprise</li>
+                                    <li>Activités – surprise</li>
+                                    <li>Joie</li>
+                                    <li>Activités – joie</li>
+                                    <li>Colère</li>
+                                    <li>Activités – colère</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="fh5co-feature animate-box">
+                            <div class="fh5co-icon"><i class="icon-toggle"></i></div>
+                            <div class="fh5co-text">
+                                <h3>4.  Participer à une discussion</h3>
+                                <ul>
+                                    <li>Dire qu’on est d’accord… ou pas.</li>
+                                    <li>Activités – accord/désaccord</li>
+                                    <li>Savoir négocier </li>
+                                    <li>Activités – savoir négocier</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div style="text-align: center;">
+				<div class="fh5co-btn-action animate-box" style="position: relative; left: -100px;">
+				<a href="#" class="btn btn-primary btn-cta" onclick="window.location.href='introduction_activites.html#videointro'">C'est parti !</a>
 				</div>
-				<section class="intro">
-					<div class="text-center">
-						<div id="videointro" class="video-container">
-							<div class="video-wrapper">
-								<!-- Video cover -->
-								<div class="video-cover" onclick="playVideo()">
-									<img src="images/cover.png" alt="Video Cover" style="width: 100%; height: auto; cursor: pointer;">
-								</div>
-						</div>
-						</div>
-						<button class="btn btn-primary" onclick="window.location.href='introduction_activites.html#activite1'">Lancer les activités</button>
-					</div>
+			</div>
+        </section>
+			<script>
+			document.querySelectorAll('.dropdown > a').forEach(function(link) {
+				link.addEventListener('click', function(e) {
+				e.preventDefault();
+				const parent = link.parentElement;
+				parent.classList.toggle('open');
+				});
+			});
 
-					<!-- Quiz modal -->
-					<div id="quiz-modal" class="quiz-modal" style="display: none;">
-						<div class="quiz-modal-content">
-							<span class="close" onclick="closeQuiz()">&times;</span>
-							<h3>Quiz : Comprendre les PPI</h3>
-							<form id="quiz-form">
-								<p><strong>1. Que signifie PPI ?</strong></p>
-								<label><input type="radio" name="q1" value="a"> Phrases Préparées pour l'Interaction</label><br>
-								<label><input type="radio" name="q1" value="b"> Phrases Préfabriquées des Interactions</label><br>
-								<label><input type="radio" name="q1" value="c"> Phrases Personnelles et Informelles</label><br>
-
-								<p><strong>2. Pourquoi les PPI sont-elles utiles ?</strong></p>
-								<label><input type="radio" name="q2" value="a"> Elles sont prêtes à l'emploi</label><br>
-								<label><input type="radio" name="q2" value="b"> Elles sont rarement utilisées</label><br>
-								<label><input type="radio" name="q2" value="c"> Elles remplacent tout le vocabulaire</label><br>
-
-								<p><strong>3. Quelle phrase est un exemple de PPI ?</strong></p>
-								<label><input type="radio" name="q3" value="a"> C'est gentil !</label><br>
-								<label><input type="radio" name="q3" value="b"> Je vais à la bibliothèque</label><br>
-								<label><input type="radio" name="q3" value="c"> Il fait beau aujourd'hui</label><br>
-
-								<button type="button" onclick="submitQuiz()">Valider</button>
-								<button type="button" onclick="resetQuiz()">Refaire</button>
-							</form>
-							<div id="quiz-result" style="margin-top: 20px; display: none;"></div>
-						</div>
-					</div>
-				</section>
+			document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
+				link.addEventListener('click', function(e) {
+				e.preventDefault();
+				const parent = link.parentElement;
+				parent.classList.toggle('open');
+				});
+			});
+			</script>
+		</section>
 				
 	<div id="glossary">
 		<button class="close-btn" onclick="toggleGlossary()">×</button>
