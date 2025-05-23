@@ -112,11 +112,11 @@
 							<div class="fh5co-right-position">
 						-->
 						<!-- a modifier peut-être-->
-						<div style="width: 100%; display: flex; justify-content: center; margin: 32px 0 0 0;">
-						<button class="btn btn-primary" onclick="document.getElementById('videointro').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
-					</div>
-            </div>
-					</div>
+							<div style="width: 100%; display: flex; justify-content: center;">
+				<button style="width: 20%; margin-top: 540px;" class="btn btn-primary" onclick="document.getElementById('videointro').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
+				</div>
+            	</div>
+				</div>
 				</div>
 			</div>
 		</section>
@@ -143,66 +143,70 @@
   </div>
 </div>
 
-<!-- Transcription -->
-<div id="fh5co-about">
-  <div class="text-left">
-    <h4>⭕ <span id="transcription" style="color:#FA5555">Transcription</span></h4>
-  </div>
-  <div class="video-container">
-    <div class="video-wrapper">
-      <iframe src="https://ladigitale.dev/digiquiz/q/682f1675997b4" style="width: 100%; height: 450px;" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-
  <section id="fh5co-about">
       <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
         <h3>🔴 Activités pour mieux comprendre les phrases toutes faites</h3>
         <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
 </div>
 <!-- Activité 1 -->
-<div class="container">
-  <div class="row row-bottom-padded-lg">
-    <!-- Bloc audio -->
-    <div class="col-md-6">
-      <figure class="animate-box">
-        <video src="audio/amies.mp3" controls class="img-fluid" style="width: 100%; height: auto; border-radius: 16px;"></video>
-      </figure>
-      <p>Cet extrait est issu de corpus Clapi. Repéré le 20 mai 2025, à l’adresse http://clapi.icar.cnrs.fr/</p>
+<div class="video-container" style="margin-bottom: 40px;">
+  <div class="video-wrapper">
+    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite1" style="color:#FA5555;">Activité 1.</span> Ça va ?</h4>
+    <div style="margin-left: 32px;">
+      <audio src="audio/amies.mp3" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+      <p style="margin-bottom: 16px;">Cet extrait est issu du corpus CLAPI. Repéré le 20 mai 2025, à l’adresse http://clapi.icar.cnrs.fr/</p>
     </div>
+    <iframe src="https://ladigitale.dev/digiquiz/q/68302c2dd926c" style="width: 100%; height: 300px;" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<!-- Activité 2 -->
+  <div class="text-left">
+  </div>
+  <div class="video-container" style="margin-bottom: 40px;">
+    <div class="video-wrapper">
+    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite2" style="color:#FA5555;">Activité 2.</span> Tu rigoles ?</h4>
+    <div style="margin-left: 32px;">
+      <audio src="audio/amies.mp3" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+      <p style="margin-bottom: 16px;">Cet extrait est issu du corpus Eslo. Repéré le 23 mai 2025, à l’adresse http://eslo.huma-num.fr/CorpusEslo/html/Corpus/index/</p>
+    </div>
+	<iframe src="https://ladigitale.dev/digiquiz/q/683072b82c165" style="width: 100%; height: 300px;" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </div>
+<!-- Activité 3 -->
+  <div class="text-left">
+  </div>
+  <div class="video-container" style="margin-bottom: 40px;">
+    <div class="video-wrapper">
+    <break><h4 style="margin-top: 32px;">⭕ <span id="activite2" style="color:#FA5555;">Activité 3.</span> Connaissez-vous ces expressions ?</h4>
+		<iframe src="https://ladigitale.dev/digiquiz/q/682f1b3572dc8" style="width: 100%; height: 300px;" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 
-    <!-- Bloc activité -->
-    <div class="col-md-6">
-      <figure class="animate-box">
-        <h4>⭕<span id="activite1" style="color:#FA5555;">Activité 1.</span> Ça va ?</h4>
-        <iframe src="https://ladigitale.dev/digiquiz/q/68302c2dd926c" allow="fullscreen; autoplay;" frameborder="0" width="100%" height="380" style="border-radius: 16px;"></iframe>
-      </figure>
+<!-- Activité 4 -->
+  <div class="video-container" style="margin-bottom: 40px;">
+    <div class="video-wrapper">
+      <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span style="color:#FA5555;">Activité 4.</span> Regardez l'extrait vidéo et répondez à la question :</h4>
+      <iframe src="https://ladigitale.dev/digiquiz/q/681dd2764d3e7" style="width: 100%; height: 500px;" frameborder="0" allowfullscreen></iframe>
+      <div style="margin-left: 32px;">
+        <p style="text-align: center;">Cet extrait vidéo est issu de l'émission Tout compte fait. Repéré le 25 avril 2025, à l’adresse : https://www.france.tv/france-2/tout-compte-fait/</p>
+      </div>
+    </div>
+  </div>
+ </section>
+ <!-- Transcription -->
+<div id="fh5co-about" style="margin-top: 0;">
+  <div class="text-left">
+	      <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+    <h2>🔴 <span id="transcription" style="color:#FA5555">Transcriptions</span></h2>
+  </div>
+  </div>
+  <div class="video-container">
+    <div class="video-wrapper">
+      <iframe src="https://ladigitale.dev/digiquiz/q/682f1675997b4" style="width: 100%; height: 450px;" frameborder="0" allowfullscreen scrolling="no"></iframe>
     </div>
   </div>
 </div>
 
-<!-- Activité 2 -->
-  <div class="text-left">
-    <h4>⭕ <span id="activite2" style="color:#FA5555;">Activité 2.</span> Connaissez-vous ces expressions ?</h4>
-  </div>
-  <div class="video-container" style="margin-bottom: 40px;">
-    <div class="video-wrapper">
-      <iframe src="https://ladigitale.dev/digiquiz/q/682f1b3572dc8" style="width: 100%; height: 300px;" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
-
-<!-- Activité 3 -->
-  <div class="text-left">
-    <h4>⭕ <span style="color:#FA5555;">Activité 3.</span> Regardez l'extrait vidéo et répondez à la question :</h4>
-  </div>
-  <div class="video-container" style="margin-bottom: 40px;">
-    <div class="video-wrapper">
-      <iframe src="https://ladigitale.dev/digiquiz/q/681dd2764d3e7" style="width: 100%; height: 500px;" frameborder="0" allowfullscreen></iframe>
-      <p style="text-align: center;">Cet extrait vidéo est issu de l'émission « Tout compte fait ». Repéré le 25 avril 2025, à l’adresse : https://www.france.tv/france-2/tout-compte-fait/</p>
-    </div>
-  </div>
- </section>
-		
 	<div id="glossary">
 		<button class="close-btn" onclick="toggleGlossary()">×</button>
 		<h3>Glossaire</h3>
@@ -216,6 +220,7 @@
 		</ul>
 	</div>
 
+	
 	<!-- Zone modale pour la transcription -->
 <div id="transcription-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
   <div style="background:#fff; max-width:900px; width:90vw; max-height:90vh; overflow:auto; border-radius:12px; padding:32px; position:relative;">
@@ -304,8 +309,7 @@ function closeTranscription() {
 					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
 						<div class="fh5co-footer-widget">
 							<ul class="fh5co-links">
-								<li><a href="#">À propos</a></li>
-								<li><a href="#">Credits</a></li>
+								<li><a href="apropos.html">À propos</a></li>
 							</ul>
 						</div>
 					</div>
