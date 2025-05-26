@@ -112,12 +112,6 @@
 						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
 					  </ul>
 					</li>
-				</ul>
-				<!-- BOUTONS UTILES EN HAUT À DROITE, HORS DU MENU PRINCIPAL -->
-				<ul style="top:300px;">					
-				  <a id="btn-commencer" href="introduction_activites.html" class="btn btn-primary">Commencer</a>
-				</li>
-				</ul>
 				<ul class="center-menu align-items" 
 				id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
 				</ul>
@@ -129,18 +123,25 @@
 					</div>
 			</div>
 		</section>
-	  	<!-- #fh5co-header -->
-		<section id="fh5co-hero" class="js-fullheight" style="background-image: url(images/hero_bg.jpg);" data-next="yes">
+        <!-- #fh5co-header -->
+		 
+        <section id="fh5co-hero" class="js-fullheight" style="background-image: url(images/hero_bg.jpg);" data-next="yes">
 			<div class="fh5co-overlay"></div>
 			<div class="container">
 				<div class="fh5co-intro js-fullheight">
 					<div class="fh5co-intro-text">
 						<div class="fh5co-left-position">
 							<h3 class="animate-box" style="font-size: 5.2rem; left: auto; text-align: leftr; line-height: 1.2;">Les phrases<br>préfabriquées<br>des interactions</h3>
-						</div>
+				  		<div>
 					</div>
+				<a id="btn-commencer" href="introduction_activites.html" style="font-size: 1.6rem; height: 60px; min-width: unset;" class="btn btn-primary">Commencer</a>
 				</div>
 			</div>
+			
+		
+
+
+
 			<div class="fh5co-learn-more animate-box" style="display: flex; justify-content: space-between; align-items: center;">
 				<a href="#" class="scroll-btn">
 					<span class="text">Découvrir le parcours</span>
@@ -220,23 +221,23 @@
 				</div>
 			</div>
         </section>
-			<script>
-			document.querySelectorAll('.dropdown > a').forEach(function(link) {
-				link.addEventListener('click', function(e) {
-				e.preventDefault();
-				const parent = link.parentElement;
-				parent.classList.toggle('open');
-				});
-			});
+		<script>
+document.querySelectorAll('.dropdown > a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parent = link.parentElement;
+        parent.classList.toggle('open');
+    });
+});
 
-			document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
-				link.addEventListener('click', function(e) {
-				e.preventDefault();
-				const parent = link.parentElement;
-				parent.classList.toggle('open');
-				});
-			});
-			</script>
+document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parent = link.parentElement;
+        parent.classList.toggle('open');
+    });
+});
+</script>
 		</section>
 				
 	<div id="glossary">
@@ -251,24 +252,6 @@
 			<li><strong>Contexte</strong>: Situation dans laquelle une phrase est utilisée.</li>
 		</ul>
 	</div>
-
-	<script>
-	document.querySelectorAll('.dropdown > a').forEach(function(link) {
-		link.addEventListener('click', function(e) {
-		e.preventDefault();
-		const parent = link.parentElement;
-		parent.classList.toggle('open');
-		});
-	});
-
-	document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
-		link.addEventListener('click', function(e) {
-		e.preventDefault();
-		const parent = link.parentElement;
-		parent.classList.toggle('open');
-		});
-	});
-	</script>
 
 	<script>
 		function toggleGlossary() {
