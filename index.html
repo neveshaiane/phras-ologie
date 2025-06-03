@@ -115,6 +115,8 @@
 				  		<div>
 					</div>
 				<a id="btn-commencer" href="introduction_activites.html" style="font-size: 1.6rem; height: 60px; min-width: unset;" class="btn btn-primary">Commencer</a>
+				<a id="btn-ppis" href="#" onclick="togglePpiInfo()" style="font-size: 1.6rem; height: 60px; min-width: unset;" class="btn btn-primary">Les PPIs, c'est quoi?</a>
+
 				</div>
 			</div>
 			<div class="fh5co-learn-more animate-box" style="display: flex; justify-content: space-between; align-items: center;">
@@ -224,6 +226,14 @@ document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
 		</ul>
 	</div>
 
+	<div id="ppi-info" style="display: none; position: fixed; top: 10%; left: 10%; width: 80%; max-width: 600px; background: white; padding: 20px; border-radius: 10px; z-index: 9999;">
+		<button class="close-btn" onclick="togglePpiInfo()">×</button>
+		<h3>Les PPIs, c'est quoi&nbsp;?</h3>
+		<p> Les <strong>phrases préfabriquées des interactions</strong> sont des formules de la conversation toutes faites qu’on utilise souvent quand on parle avec les autres, surtout dans des situations courantes.<br>
+			Exemples : <i>c'est gentil ; on ne va pas se mentir ; ça va ; c'est bon.</i>
+		</p>
+	</div>
+
 	<script>
 		function toggleGlossary() {
 			const glossary = document.getElementById('glossary');
@@ -247,6 +257,17 @@ document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
 				}
 			});
 		}
+	</script>
+
+	<script>
+	function togglePpiInfo() {
+		const info = document.getElementById('ppi-info');
+		if (info.style.display === 'none' || info.style.display === '') {
+			info.style.display = 'block';
+		} else {
+			info.style.display = 'none';
+		}
+	}
 	</script>
 
 		</section>
