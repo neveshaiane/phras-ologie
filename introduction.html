@@ -48,53 +48,12 @@
 		<section id="fh5co-header">
 		  <div class="container">
 			<nav role="navigation">
-				<ul class="menu">
-					<li class="dropdown">
-					  <a href="#">Fonctions langagières</a>
-					  <ul class="dropdown-menu">
-						<li class="dropdown-sub">
-						  <a href="module1.html">Rituels sociaux ▸</a>
-						  <ul class="submenu">
-							<li><a href="module1.html">Saluer</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Remercier</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">S'excuser</a></li>
-						  </ul>
-						</li>
-				  
-						<li class="dropdown-sub">
-						  <a href="#">Exprimer une émotion ▸</a>
-						  <ul class="submenu">
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Joie et Enthousiasme</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Reconfort et Encouragement</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Surprise, étonnement et incrédulité</a></li>
-						  </ul>
-						</li>
-				  
-						<li class="dropdown-sub">
-						  <a href="#">Indiquer son accord ▸</a>
-						  <ul class="submenu">
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Négociation</a></li>
-						  </ul>
-						</li>
-					  </ul>
-					</li>
-				  	<li class="dropdown spaced">
-					  <a href="#">Aspects linguistiques</a>
-					  <ul class="dropdown-menu">
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Combinatoire des PPI</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Aspects conversationnels</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
-					  </ul>
-					</li>
-				</ul>
 					<div class="right-menu align-right">
 					  <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
-					  <a id="btn-apropos" href="apropos.html" class="btn btn-primary">A propos</a>
+					  <button id="btn-apropos" class="btn btn-primary" onclick="toggleAproposPopup()">À propos</button>
 					</div>
 					<ul class="center-menu align-items" 
-					id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
+					id="fh5co-logo"><a href="">PREFAB<span>.FLE</span></a>		
 					</ul>
 			</div>
 		</section>
@@ -136,7 +95,7 @@
     </div>
   </div>
 
- <!-- Boutons -->
+  <!-- Boutons -->
   <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
     <button class="btn btn-primary" onclick="window.location.href='#transcription'">Lire les transcriptions</button>
 	    <button class="btn btn-primary" onclick="window.location.href='#activite1'">Lancer les activités</button>
@@ -155,7 +114,7 @@
       <iframe src="https://ladigitale.dev/digiquiz/q/683d88ef5e31c" style="width: 100%; height: 450px;" frameborder="0" allowfullscreen scrolling="no"></iframe>
 	</div>
   </div>
-<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
   <button class="btn btn-primary" onclick="window.location.href='#activite1'">Lancer les activités</button>
 </div>
 </div>
@@ -166,6 +125,7 @@
         <h3>🔴 Activités pour mieux comprendre les phrases toutes faites</h3>
         <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
 </div>
+
 <!-- Activité 1 -->
  <section>
 <div class="video-container" style="margin-bottom: 40px;">
@@ -257,7 +217,6 @@ Exemple : Voilà, c’est ce que je voulais dire.
   <div style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
     <button onclick="document.getElementById('explication-saoule').style.display='none'" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
     <div style="white-space: pre-line;">
-<audio src="audio/saoule.wav" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
 🗣️ <strong>Explication</strong>
 Dans la vidéo d'introduction, nous avons aussi vu l'expression <i>ça me saoule</i>, employée au passé <i>ça m'a saoulé</i> utilisée dans une conversation entre amies.
 Dans cet autre contexte, le sens est le même :
@@ -280,6 +239,7 @@ Elle supporte un moment, mais à force, elle en a marre. On parle donc d'un agac
     <button onclick="document.getElementById('transcription-saoule').style.display='none'" style="position:absolute; top:24px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
     <div style="white-space: pre-line;">
 <div style="white-space: pre-line;">
+<audio src="audio/saoule.wav" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
 <strong>Transcription</strong>
 Véronique : je sais pas. Je suis pas... Je suis pas fane de l'émission là.
 Clarisse : oh j' aime bien.
@@ -288,10 +248,10 @@ Clarisse : oh ouais c' est chouette. Moi, j'aime bien.
 Véronique : ça me saoule au bout d'un moment.
 Clarisse : ah bon ? 
 Louis : oh non oh.
-[Les extraits présentés ici sont anonymisés ; les prénoms utilisés sont fictifs.]
   </div>
 </div>
 </section>
+
 <!-- Activité 4 -->
 <section>  
 <div class="text-left">
@@ -334,7 +294,7 @@ Dans l'extrait vidéo, les formules et les expressions faciales de la femme indi
       <audio src="audio/rigole.mp3" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">Cet extrait est issu du corpus Eslo. Relevé le 23 mai 2025, à l’adresse http://eslo.huma-num.fr/CorpusEslo/html/Corpus/index/</p>
     </div>
-  	<iframe src="https://ladigitale.dev/digiquiz/q/6835a8a8b999d" style="width: 100%; height: 330px;" frameborder="0" allowfullscreen></iframe>
+  	<iframe src="https://ladigitale.dev/digiquiz/q/6835a8a8b999d" style="width: 100%; height: 325px;" frameborder="0" allowfullscreen></iframe>
 	<!-- Bouton transcription pour activité 5 -->
 <div style="margin-top: 16px;">
   <button class="btn" style="background:#FA5555; color:#fff; border:none;" onclick="document.getElementById('transcription-rigole').style.display='flex'">📃 Transcription</button>
@@ -344,8 +304,8 @@ Dans l'extrait vidéo, les formules et les expressions faciales de la femme indi
   <div style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
     <button onclick="document.getElementById('transcription-rigole').style.display='none'" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
     <div style="white-space: pre-line;">
-      <audio src="audio/rigole.mp3" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
-		<strong>Transcription</strong>
+	<audio src="audio/rigole.mp3" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+<strong>Transcription</strong>
 Invité : bon, bah, merci. C'était.. merci beaucoup.
 Elodie : Mais non, mais toi, tu manges, hein.
 Invité : Ah non.
@@ -372,12 +332,7 @@ Invité : Bon, bah, écoute, c'est vachement sympa.
   </div>
 </div>
  </section>
-  <div class="completion-message">
-	<div class="text-center">
-  <p> Vous avez terminé cette capsule d'apprentissage. ✅ </p>  
-  <button onclick="window.location.href='module1.html'"class="btn btn-primary">Passer au prochain chapitre</button></div>
-</div>
-</div>
+
 <!-- Glossaire modal amélioré -->
 	<div id="glossary">
 		<button class="close-btn" onclick="toggleGlossary()">×</button>
@@ -446,7 +401,6 @@ Invité : Bon, bah, écoute, c'est vachement sympa.
 				}
 			});
 		}
-
 		document.getElementById('btn-transcription').addEventListener('click', function(e) {
   e.preventDefault();
   const modal = document.getElementById('transcription-modal');
@@ -484,7 +438,6 @@ function closeTranscription() {
 		const parent = link.parentElement;
 		parent.classList.toggle('open');
 		});
-	});
 		</script>
 		<footer id="fh5co-footer">
 			<div class="container">
@@ -536,5 +489,39 @@ function closeTranscription() {
 <script>
 // Suppression du script d'ajout du bouton "fermer" pour le menu latéral mobile
 </script>
-		</body>
-	</html>
+
+<!-- Ajout du modal À propos -->
+<div id="apropos-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+  <div style="background:#fff; max-width:500px; width:90vw; max-height:90vh; overflow:auto; border-radius:12px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+    <button onclick="toggleAproposPopup()" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
+    <h3>À propos</h3>
+    <p>Ce site est un prototype du projet PREFAB.FLE, conçu pour vous aider à apprendre et à pratiquer des PPI (phrases préfabriquées d'interaction) dans des contextes variés. 
+	<h2>📚 Corpus linguistiques</h2>
+        <p>Les données linguistiques utilisées dans ce projet proviennent des corpus suivants :</p>
+        <ul>
+        <li><a href="http://clapi.icar.cnrs.fr/" target="_blank">CLAPI - Interaction parlée</a></li>
+        <li><a href="http://clapi.icar.cnrs.fr/FLE/" target="_blank">CLAPI-FLE - Français Langue Étrangère</a></li>
+        <li><a href="https://fleuron.atilf.fr/" target="_blank">FLEURON - Corpus oraux du français</a></li>
+        <li><a href="http://clapi.icar.cnrs.fr/Corail/" target="_blank">CORAIL - Corpus d’Interactions Linguistiques</a></li>
+    	</ul>
+	 <h2>🎨 Design graphique</h2>
+    <p>Les éléments graphiques (illustrations, icônes, visuels) proviennent des ressources suivantes :</p>
+    <ul>
+    <li><a href="https://www.freepik.com/" target="_blank">Freepik</a></li>
+    <li><a href="https://www.freepik.com/author/stories" target="_blank">Illustrations de l’auteur Stories sur Freepik</a></li>
+    </ul>
+	<br><br>Contact : shaiane.da-silva-neves@etu.univ-grenoble-alpes.fr</p>
+  </div>
+</div>
+<script>
+function toggleAproposPopup() {
+  const modal = document.getElementById('apropos-modal');
+  if (modal.style.display === 'none' || modal.style.display === '') {
+    modal.style.display = 'flex';
+  } else {
+    modal.style.display = 'none';
+  }
+}
+</script>
+</body>
+</html>
