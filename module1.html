@@ -46,87 +46,7 @@
 	<link rel="stylesheet" href="css/red.css">
 
 	<style>
-  .drag-drop-container {
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    padding: 20px;
-    background-color: #fff; /* Arrière-plan blanc */
-  }
-
-  .drag-drop-options {
-    display: grid;
-    grid-template-columns: repeat(6, auto); /* 5 items per row with minimal width */
-    gap: 5px;
-    justify-content: center;
-  }
-
-  .drag-drop-item {
-    padding: 5px 8px;
-    background: none; /* Remove background */
-    color: #FA5555;
-    font-weight: bold;
-    cursor: grab;
-    transition: transform 0.2s;
-    text-align: center;
-    font-size: 1.2rem;
-    border: none; /* Remove border */
-    box-shadow: none; /* Remove box-shadow */
-  }
-
-  .drag-drop-item:hover {
-    transform: scale(1.05);
-  }
-
-  .drag-drop-zones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    width: 80%;
-  }
-
-  .drag-drop-zone {
-    width: calc(50% - 20px);
-    min-height: 150px;
-    padding: 50px;
-    background: #fff; /* Arrière-plan blanc */
-    color: #FA5555;
-    border: 2px solid #FA5555; /* Bordure normale */
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
-  }
-
-  .drag-drop-zone.over {
-    background-color: #FFE5E5;
-    transform: scale(1.05);
-  }
-
-  button.drag-drop-correction-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #FA5555;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
-  }
-
-  button.drag-drop-correction-btn:hover {
-    background-color: #FFE5E5;
-    transform: scale(1.2); /* Augmentation de la taille */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre */
-  }
-
+ 
 	/* Glossary styles */
 	#glossary {
 		display: none; /* Initially hidden */
@@ -288,7 +208,7 @@
 					</div>
 			</div>
         </div>
-		<button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">Activités</button>
+		<button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">Lances les activités</button>
       </div>
     </section>
   </section>
@@ -412,7 +332,7 @@
 <!-- Activité 5 -->
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite5" style="color:#FA5555;">Activité 5.</span> Écoutez et répondez. Vocal à un(e) ami(e).</h4>
+    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite5" style="color:#FA5555;">5.</span> Écoutez et répondez. Vocal à un(e) ami(e).</h4>
     <div style="margin-left: 32px;">
       <audio controls src="audio/vocal_salut.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
@@ -441,7 +361,7 @@
       ⭕ <span style="color:#FA5555;">1.</span> Qui parle ?
     </h4>
     <div style="margin-left: 32px;">
-      <audio controls src="audio/cloture_aud1.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+      <audio controls src="audio/cloture_aud1.mp3" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
         Cet extrait audio est issu de corpus FLEURON. Relevé le 22 mai 2025, à l’adresse https://fleuron.atilf.fr/
       </p>
@@ -460,7 +380,7 @@
       ⭕ <span style="color:#FA5555;">2.</span> Qui parle ?
     </h4>
     <div style="margin-left: 32px;">
-      <audio controls src="audio/Cloture_aud2.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+      <audio controls src="audio/cloture_aud2.mp3" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
         Cet extrait audio est issu de corpus FLEURON. Relevé le 22 mai 2025, à l’adresse https://fleuron.atilf.fr/
       </p>
@@ -545,7 +465,7 @@
   <div class="completion-message">
 	<div class="text-center">
   <p> Vous avez terminé cette capsule d'apprentissage. ✅ </p>  
-  <button onclick="window.location.href='remercier.html'"class="btn btn-primary">Passer à la prochaine leçon</button></div>
+  <button onclick="window.location.href='remercier.html'"class="btn btn-primary">Passer au prochain chapitre</button></div>
   </div>
 
 	<div id="glossary">
@@ -723,55 +643,6 @@ function playVideo1() {
     zone.addEventListener('dragleave', dragLeave);
     zone.addEventListener('drop', drop);
   });
-
-  let draggedItem = null;
-
-  function dragStart(e) {
-    draggedItem = e.target;
-    setTimeout(() => {
-      e.target.style.display = 'none';
-    }, 0);
-  }
-
-  function dragOver(e) {
-    e.preventDefault();
-  }
-
-  function dragEnter(e) {
-    e.preventDefault();
-    this.classList.add('over');
-  }
-
-  function dragLeave() {
-    this.classList.remove('over');
-  }
-
-  function drop() {
-    this.classList.remove('over');
-    const correctZoneId = correctAnswers[draggedItem.textContent];
-    if (this.id === correctZoneId) {
-      this.appendChild(draggedItem);
-      draggedItem.style.display = 'block';
-      draggedItem = null;
-    } else {
-      this.appendChild(draggedItem); // Leave the item in the incorrect zone
-      draggedItem.style.display = 'block';
-      draggedItem = null;
-    }
-  }
-
-  const correctAnswers = {
-    "Bonjour": "zone1",
-    "Salut": "zone1",
-    "Ça va ?": "zone1",
-    "Ça marche.": "zone3",
-    "C'est bon.": "zone3",
-    "Bonne journée.": "zone1",
-    "Pas de souci.": "zone3",
-    "Il est pour moi.": "zone3",
-    "Au revoir.": "zone1",
-	"Je retiens": "zone3",
-  };
 
   document.getElementById('correction-btn').addEventListener('click', () => {
     const items = document.querySelectorAll('.drag-drop-item');
