@@ -75,6 +75,100 @@ ul.menu > li > a {
   margin-right: 20px; /* Adjust spacing as needed */
 }
 
+/* Navigation Menu Styles */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.menu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-menu,
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.submenu {
+  top: 0;
+  left: 100%;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown-sub:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li,
+.submenu li {
+  display: block;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu li:last-child,
+.submenu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a,
+.submenu a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover,
+.submenu a:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-disabled {
+  color: #999 !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.btn-disabled:hover {
+  background-color: transparent !important;
+}
+
+/* Ensure smooth transitions */
+.dropdown,
+.dropdown-sub {
+  position: relative;
+}
+
+/* Fix spacing issues by ensuring proper positioning */
+.dropdown-menu {
+  margin-top: 0;
+}
+
+.submenu {
+  margin-left: -1px;
+}
+
 .align-right {
   display: flex;
   justify-content: flex-end; /* Align items to the right */
@@ -244,6 +338,49 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   line-height: 25px;
 }
+
+* Glossary styles */
+#ppi-info {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 14px;
+  overflow-y: auto;
+  max-height: 70vh;
+  z-index: 1000; /* Ensure it appears in front */
+}
+
+#ppi-info h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+#ppi-info .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #FA5555;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 25px;
+}
+
 body {
   background: #efefef url(../images/white_wave.png) repeat;
 }
@@ -1684,7 +1821,7 @@ ul.right-menu.align-right a.btn.btn-primary:hover {
   }
 }
 
-#btn-commencer
+#btn-commencer #btn-ppis
 {
   margin-top: 30px; /* Ajoute 20px d'espace à gauche du bouton */
 }
@@ -1729,7 +1866,7 @@ ul.right-menu.align-right a.btn.btn-primary:hover {
 }
 
 /* If Commencer is fixed at bottom right */
-#btn-commencer.fixed-bottom {
+#btn-commencer.fixed-bottom #btn-ppis.fixed-bottom {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1737,7 +1874,7 @@ ul.right-menu.align-right a.btn.btn-primary:hover {
   box-shadow: 0 2px 8px rgba(250,85,85,0.15);
 }
 @media (max-width: 600px) {
-  #btn-commencer.fixed-bottom {
+  #btn-commencer.fixed-bottom #btn-ppis.fixed-bottom {
     bottom: 10px;
     right: 10px;
     width: calc(100vw - 40px);
