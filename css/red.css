@@ -5,176 +5,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /* =======================================================
 *
 * 	Template Style 
 *	Edit this section
 *
 * ======================================================= */
-.menu,
-/* Pas de changement ici pour la base */
-/*# sourceMappingURL=red.css.map */
-ul.menu > li > a {
-    font-size: 1.5rem; /* Taille de police augmentée */
-    font-weight: bold; /* Texte en gras */
-    text-decoration: none; /* Supprime le soulignement */
-    color: #004080; /* Couleur du texte */
-}
 
-.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+/*Le menu*/
 
-.menu > li {
-  position: relative;
-  display: inline-block;
-}
 
-.spaced {
-  margin-left: 50px;
-}
-
-.dropdown-menu {
-    display: none; /* Masque le menu déroulant par défaut */
-    position: absolute;
-    background: #f9f9f9; /* Couleur de fond corrigée */
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre corrigée */
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-}
-
-.dropdown.open > .dropdown-menu {
-    display: block; /* Affiche le menu déroulant lorsqu'il est ouvert */
-}
-
-.dropdown-sub {
-  position: relative;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: #FA5555;
-    padding: 10px;
-    white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.dropdown-sub.open > .submenu {
-    display: block; /* Affiche le sous-menu lorsqu'il est ouvert */
-}
-
-.custom-right {
-  float: right;
-  margin-right: 20px; /* Adjust spacing as needed */
-}
-
-/* Navigation Menu Styles */
-.menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.menu > li {
-  display: inline-block;
-  position: relative;
-}
-
-.dropdown-menu,
-.submenu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  min-width: 200px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.submenu {
-  top: 0;
-  left: 100%;
-}
-
-.dropdown:hover > .dropdown-menu,
-.dropdown-sub:hover > .submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown-menu li,
-.submenu li {
-  display: block;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.dropdown-menu li:last-child,
-.submenu li:last-child {
-  border-bottom: none;
-}
-
-.dropdown-menu a,
-.submenu a {
-  display: block;
-  padding: 12px 16px;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-menu a:hover,
-.submenu a:hover {
-  background-color: #f8f9fa;
-}
-
-.btn-disabled {
-  color: #999 !important;
-  cursor: not-allowed !important;
-  pointer-events: none;
-}
-
-.btn-disabled:hover {
-  background-color: transparent !important;
-}
-
-/* Ensure smooth transitions */
-.dropdown,
-.dropdown-sub {
-  position: relative;
-}
-
-/* Fix spacing issues by ensuring proper positioning */
-.dropdown-menu {
-  margin-top: 0;
-}
-
-.submenu {
-  margin-left: -1px;
-}
-
-.align-right {
-  display: flex;
-  justify-content: flex-end; /* Align items to the right */
-  align-items: center;
-  gap: 10px; /* Space between buttons */
-}
 
 body {
   font-family: "Roboto", Arial, sans-serif;
@@ -274,15 +115,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* test a changer */
 #btn-glossaire, #btn-apropos {
   display: inline-block;
   vertical-align: middle;
   margin-left: 10px;
 }
-
-
-/* fin test */
 
 .form-control {
   box-shadow: none;
@@ -297,9 +134,10 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: none;
   border-color: #FA5555;
 }
+
 /* Glossary styles */
 #glossary {
-  display: none; /* Initially hidden */
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -313,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   overflow-y: auto;
   max-height: 70vh;
-  z-index: 1000; /* Ensure it appears in front */
+  z-index: 1000;
 }
 
 #glossary h3 {
@@ -324,48 +162,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #glossary .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #FA5555;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 25px;
-}
-
-* Glossary styles */
-#ppi-info {
-  display: none; /* Initially hidden */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  font-size: 14px;
-  overflow-y: auto;
-  max-height: 70vh;
-  z-index: 1000; /* Ensure it appears in front */
-}
-
-#ppi-info h3 {
-  margin-top: 0;
-  font-size: 16px;
-  color: #333;
-  text-align: center;
-}
-
-#ppi-info .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -423,7 +219,6 @@ body {
   position: absolute;
   width: 100%;
   left: 0;
-  padding-top: 50px;
   z-index: 12;
 }
 @media screen and (max-width: 768px) {
@@ -431,15 +226,7 @@ body {
     padding-top: 30px;
   }
 }
-#fh5co-header #fh5co-logo {
-  text-align: center;
-  display: block;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: -12px;
-  z-index: 1;
-}
+
 #fh5co-header #fh5co-logo a {
   font-size: 30px;
   font-weight: 500;
@@ -448,133 +235,68 @@ body {
 #fh5co-header #fh5co-logo a span {
   color: #FA5555;
 }
-#fh5co-header nav {
-  position: relative;
-}
-#fh5co-header nav ul {
-  padding: 0;
-  margin: 0;
-  z-index: 2;
-  position: relative;
+#fh5co-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-40px);
 }
 @media screen and (max-width: 768px) {
   #fh5co-header nav ul {
     display: none;
   }
 }
-#fh5co-header nav ul li {
-  display: inline;
-}
-#fh5co-header nav ul li a {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 400;
-}
-#fh5co-header nav ul li a:hover {
-  color: white;
-}
-#fh5co-header nav ul li.fh5co-cta-btn a {
-  position: relative;
-  border-bottom: none;
-  padding: 7px 20px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  border-radius: 7px;
-}
-#fh5co-header nav ul li.fh5co-cta-btn a:hover {
-  border: 2px solid white;
-}
-#fh5co-header nav ul li.active a {
-  color: white;
-}
-#fh5co-header nav ul.left-menu li {
-  margin-right: 30px;
-  
-}
-#fh5co-header nav ul.right-menu li {
-  margin-left: 30px;
-  
-}
 
-/* Dropdown menu style */
-.arrow {
-  font-size: 12px;
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
 
-.dropdown.open > a .arrow {
-  transform: rotate(180deg); /* Tourne la flèche vers le haut */
-}
-
-.dropdown-menu {
-    display: none; /* Cache les sous-menus par défaut */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown.open > .dropdown-menu {
-    display: block; /* Affiche le sous-menu lorsque la classe "open" est ajoutée */
-}
-#fh5co-header nav ul li.dropdown {
-  position: relative;
-}
-
-#fh5co-header nav ul li .dropdown-menu {
-  display: none;
+/* Right menu utility buttons */
+.right-menu.align-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background: #FA5555;
-  padding: 10px 0;
-  min-width: 160px;
-  z-index: 10;
-  border-radius: 5px;
+  top: 10px;
+  right: 30px;
+  z-index: 20;
 }
 
-.arrow {
-    font-size: 12px;
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-}
-
-.dropdown.open > a .arrow {
-    transform: rotate(180deg); /* Tourne la flèche vers le haut */
-}
-
-.dropdown-menu {
-    display: none; /* Cache les sous-menus par défaut */
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown.open > .dropdown-menu {
-    display: block; /* Affiche le sous-menu lorsque la classe "open" est ajoutée */
-}
-
-#fh5co-header nav ul li .dropdown-menu li {
-  display: block;
+#btn-glossaire, #btn-apropos {
+  display: inline-block;
+  background: #FA5555 !important;
+  color: #fff !important;
+  border: 2px solid #FA5555 !important;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 22px !important;
+  height: 44px;
+  line-height: 22px;
   margin: 0;
-}
-
-#fh5co-header nav ul li .dropdown-menu li a {
-  color: #2a2d36
-  padding: 10px 20px;
-  display: block;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  text-align: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
-#fh5co-header nav ul li .dropdown-menu li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+#btn-glossaire:hover, #btn-apropos:hover {
+  background: #fb6e6e !important;
+  border-color: #fb6e6e !important;
 }
 
-/* Show dropdown on hover */
-#fh5co-header nav ul li.dropdown:hover .dropdown-menu {
-  display: block;
+@media (max-width: 600px) {
+  .right-menu.align-right {
+    position: static;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 100%;
+  }
+  #btn-glossaire, #btn-apropos {
+    font-size: 0.95rem;
+    padding: 7px 10px;
+    height: 36px;
+  }
 }
 
 #fh5co-hero {
@@ -1737,16 +1459,6 @@ ul.right-menu.align-right a.btn.btn-primary:hover {
   border-color: #fb6e6e !important;
 }
 
-/* Désactive visuellement les liens de menu sans page */
-.btn-disabled {
-  pointer-events: none;
-  color: #f0eaea !important;
-  background: #f77d7d !important;
-  border: none !important;
-  cursor: not-allowed !important;
-  opacity: 0.7;
-  text-decoration: line-through;
-}
 
 /* Aligne les boutons utilitaires à droite et en haut, sur la même ligne */
 .right-menu.align-right {
@@ -1839,15 +1551,6 @@ ul.right-menu.align-right a.btn.btn-primary:hover {
   z-index: 20;
 }
 
-/* Remove obsolete/duplicate selectors for .right-menu.align-right */
-ul.right-menu.align-right .btn.btn-primary,
-ul.right-menu.align-right a.btn.btn-primary,
-ul.right-menu.align-right .btn.btn-primary:hover,
-ul.right-menu.align-right a.btn.btn-primary:hover {
-  background: unset !important;
-  color: unset !important;
-  border: unset !important;
-}
 
 /* Remove test/obsolete margin for #btn-glossaire, #btn-apropos */
 #btn-glossaire, #btn-apropos {
