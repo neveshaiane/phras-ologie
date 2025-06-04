@@ -46,7 +46,87 @@
 	<link rel="stylesheet" href="css/red.css">
 
 	<style>
- 
+  .drag-drop-container {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fff; /* Arrière-plan blanc */
+  }
+
+  .drag-drop-options {
+    display: grid;
+    grid-template-columns: repeat(6, auto); /* 5 items per row with minimal width */
+    gap: 5px;
+    justify-content: center;
+  }
+
+  .drag-drop-item {
+    padding: 5px 8px;
+    background: none; /* Remove background */
+    color: #FA5555;
+    font-weight: bold;
+    cursor: grab;
+    transition: transform 0.2s;
+    text-align: center;
+    font-size: 1.2rem;
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove box-shadow */
+  }
+
+  .drag-drop-item:hover {
+    transform: scale(1.05);
+  }
+
+  .drag-drop-zones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .drag-drop-zone {
+    width: calc(50% - 20px);
+    min-height: 150px;
+    padding: 50px;
+    background: #fff; /* Arrière-plan blanc */
+    color: #FA5555;
+    border: 2px solid #FA5555; /* Bordure normale */
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .drag-drop-zone.over {
+    background-color: #FFE5E5;
+    transform: scale(1.05);
+  }
+
+  button.drag-drop-correction-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #FA5555;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  button.drag-drop-correction-btn:hover {
+    background-color: #FFE5E5;
+    transform: scale(1.2); /* Augmentation de la taille */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre */
+  }
+
 	/* Glossary styles */
 	#glossary {
 		display: none; /* Initially hidden */
@@ -113,61 +193,143 @@
 	<!-- Loader -->
 	<div class="fh5co-loader"></div>
 	
-	<div id="fh5co-page">
-		<section id="fh5co-header">
-		  <div class="container">
-			<nav role="navigation">
-				<ul class="menu">
-					<li class="dropdown">
-					  <a href="#">Fonctions langagières</a>
-					  <ul class="dropdown-menu">
-						<li class="dropdown-sub">
-						  <a href="module1.html">Rituels sociaux ▸</a>
-						  <ul class="submenu">
-							<li><a href="module1.html">Saluer</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Remercier</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">S'excuser</a></li>
-						  </ul>
-						</li>
-				  
-						<li class="dropdown-sub">
-						  <a href="#">Exprimer une émotion ▸</a>
-						  <ul class="submenu">
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Joie et Enthousiasme</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Reconfort et Encouragement</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Surprise, étonnement et incrédulité</a></li>
-						  </ul>
-						</li>
-				  
-						<li class="dropdown-sub">
-						  <a href="#">Indiquer son accord ▸</a>
-						  <ul class="submenu">
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
-							<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Négociation</a></li>
-						  </ul>
-						</li>
-					  </ul>
-					</li>
-				  	<li class="dropdown spaced">
-					  <a href="#">Aspects linguistiques</a>
-					  <ul class="dropdown-menu">
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
+	<!-- #fh5co-header -->
+  <section id="fh5co-header">
+    <!-- Menu -->
+    <style>
+    nav {
+      background-color: var(--white);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background: var(--white);
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: whitesmoke;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu li a:hover {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    /* Submenu (2nd tier) */
+    .submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #FA5555;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+      min-width: 180px;
+      border: 1px solid var(--lt-color-gray-300);
+    }
+
+    .submenu li a {
+      display: block;
+      padding: 12px 15px;
+      color: var(--lt-color-gray-700);
+      text-decoration: none;
+    }
+
+    .submenu li:hover > a {
+      background-color: var(--lt-color-gray-200);
+    }
+
+    /* Show submenu on hover */
+    .menu li:hover > .submenu {
+      display: block;
+    }
+
+    /* Sub-submenu (3rd tier) */
+    .submenu .submenu {
+      left: 100%;
+      top: 0;
+    }
+
+  </style>
+
+  <nav>
+    <ul class="menu">
+      <li>
+        <a href="#">Fonctions langagières</a>
+        <ul class="submenu">
+          <li>
+            <a href="module1.html">Rituels sociaux ▶</a>
+            <ul class="submenu">
+              <li><a href="module1.html">Saluer</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Remercier</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">S'excuser</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Exprimer une émotion ▶</a>
+            <ul class="submenu">
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Joie et Enthousiasme</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Reconfort et Encouragement</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Surprise, étonnement et incrédulité</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Indiquer son accord ▶</a>
+          <ul class="submenu">
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Negociation</a></li>
+          </ul>     
+        </ul>
+      </li>
+      <li>
+        <a href="#">Aspects linguistiques</a>
+        <ul class="submenu">
+          <li>
+            <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
 						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Combinatoire des PPI</a></li>
 						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Aspects conversationnels</a></li>
 						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
-					  </ul>
-					</li>
-				</ul>
-					<div class="right-menu align-right">
-					  <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
-					  <a id="btn-apropos" href="apropos.html" class="btn btn-primary">A propos</a>
-					</div>
-				<ul class="center-menu align-items" 
-				id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a>		
-				</ul>
-			</div>
-		</section>
-		<!-- #fh5co-header -->
+          </li>
+        </ul>
+      </li>
+  <!-- Pour ajouter plus de titres de menu :
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul>
+  --> 
+  </nav>
+
+  <div class="right-menu align-right">
+          <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">
+            Glossaire
+          </button>
+          <a id="btn-apropos" href="apropos.html" class="btn btn-primary">
+            À propos
+          </a>
+        </div>
+        
+        <ul id="fh5co-logo">
+          <a href="index.html">PREFAB<span>.FLE</span></a>
+    </ul>
+
+  </section>
 
 		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/full_image_1.jpg);" data-next="yes">
 			<div class="fh5co-overlay"></div>
@@ -208,7 +370,7 @@
 					</div>
 			</div>
         </div>
-		<button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">Lancer les activités</button>
+		<button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">Activités</button>
       </div>
     </section>
   </section>
@@ -228,7 +390,7 @@
 					</div>
 			</div>
         </div>
-		<button class="btn btn-primary" onclick="document.getElementById('sal_cloture').scrollIntoView({ behavior: 'smooth' })">Lancer les activités</button>
+		<button class="btn btn-primary" onclick="document.getElementById('sal_cloture').scrollIntoView({ behavior: 'smooth' })">Activités</button>
       </div>
     </section>
   </section>
@@ -332,7 +494,7 @@
 <!-- Activité 5 -->
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite5" style="color:#FA5555;">5.</span> Écoutez et répondez. Vocal à un(e) ami(e).</h4>
+    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite5" style="color:#FA5555;">Activité 5.</span> Écoutez et répondez. Vocal à un(e) ami(e).</h4>
     <div style="margin-left: 32px;">
       <audio controls src="audio/vocal_salut.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
@@ -361,7 +523,7 @@
       ⭕ <span style="color:#FA5555;">1.</span> Qui parle ?
     </h4>
     <div style="margin-left: 32px;">
-      <audio controls src="audio/cloture_aud1.mp3" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+      <audio controls src="audio/cloture_aud1.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
         Cet extrait audio est issu de corpus FLEURON. Relevé le 22 mai 2025, à l’adresse https://fleuron.atilf.fr/
       </p>
@@ -380,7 +542,7 @@
       ⭕ <span style="color:#FA5555;">2.</span> Qui parle ?
     </h4>
     <div style="margin-left: 32px;">
-      <audio controls src="audio/cloture_aud2.mp3" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+      <audio controls src="audio/Cloture_aud2.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
         Cet extrait audio est issu de corpus FLEURON. Relevé le 22 mai 2025, à l’adresse https://fleuron.atilf.fr/
       </p>
@@ -450,12 +612,13 @@
 </div>
 
  <!-- Activité 6 (texte à trous clôture) -->
+<!-- Activité 3 (texte à trous clôture) -->
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
     <h4 style="margin-top:16px; margin-bottom:12px;">
       ⭕ <span style="color:#FA5555;">6.</span> Texte à trous.
     </h4>
-    <iframe src="https://ladigitale.dev/digiquiz/q/683eedff07f0f"
+    <iframe src="https://ladigitale.dev/digiquiz/q/68371105cc3f6"
   allow="fullscreen; autoplay;" frameborder="0" style="width: 100%; height: 870px; overflow: hidden;"></iframe>
   </div>
   </div>
@@ -464,7 +627,7 @@
   <div class="completion-message">
 	<div class="text-center">
   <p> Vous avez terminé cette capsule d'apprentissage. ✅ </p>  
-  <button onclick="window.location.href='remercier.html'"class="btn btn-primary">Passer au prochain chapitre</button></div>
+  <button onclick="window.location.href='remercier.html'"class="btn btn-primary">Passer à la prochaine leçon</button></div>
   </div>
 
 	<div id="glossary">
@@ -642,6 +805,55 @@ function playVideo1() {
     zone.addEventListener('dragleave', dragLeave);
     zone.addEventListener('drop', drop);
   });
+
+  let draggedItem = null;
+
+  function dragStart(e) {
+    draggedItem = e.target;
+    setTimeout(() => {
+      e.target.style.display = 'none';
+    }, 0);
+  }
+
+  function dragOver(e) {
+    e.preventDefault();
+  }
+
+  function dragEnter(e) {
+    e.preventDefault();
+    this.classList.add('over');
+  }
+
+  function dragLeave() {
+    this.classList.remove('over');
+  }
+
+  function drop() {
+    this.classList.remove('over');
+    const correctZoneId = correctAnswers[draggedItem.textContent];
+    if (this.id === correctZoneId) {
+      this.appendChild(draggedItem);
+      draggedItem.style.display = 'block';
+      draggedItem = null;
+    } else {
+      this.appendChild(draggedItem); // Leave the item in the incorrect zone
+      draggedItem.style.display = 'block';
+      draggedItem = null;
+    }
+  }
+
+  const correctAnswers = {
+    "Bonjour": "zone1",
+    "Salut": "zone1",
+    "Ça va ?": "zone1",
+    "Ça marche.": "zone3",
+    "C'est bon.": "zone3",
+    "Bonne journée.": "zone1",
+    "Pas de souci.": "zone3",
+    "Il est pour moi.": "zone3",
+    "Au revoir.": "zone1",
+	"Je retiens": "zone3",
+  };
 
   document.getElementById('correction-btn').addEventListener('click', () => {
     const items = document.querySelectorAll('.drag-drop-item');
