@@ -215,6 +215,22 @@ body {
   }
 }
 
+ #ppi-info .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #FA5555;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 25px;
+}
+
 #fh5co-header {
   position: absolute;
   width: 100%;
