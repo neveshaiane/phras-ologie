@@ -125,7 +125,7 @@
         <a href="#">Fonctions langagières</a>
         <ul class="submenu">
           <li>
-            <a href="module1.html">Rituels sociaux ▶</a>
+            <a href="module1.html">Rituels sociaux▶</a>
             <ul class="submenu">
               <li><a href="module1.html">Saluer</a></li>
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Remercier</a></li>
@@ -133,47 +133,38 @@
             </ul>
           </li>
           <li>
-            <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Exprimer une émotion ▶</a>
+          <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Indiquer son accord▶</a>
+          <ul class="submenu">
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Negociation</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Exprimer une émotion▶</a>
             <ul class="submenu">
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Joie et Enthousiasme</a></li>
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Reconfort et Encouragement</a></li>
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Surprise, étonnement et incrédulité</a></li>
             </ul>
           </li>
-          <li>
-          <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Indiquer son accord ▶</a>
-          <ul class="submenu">
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Negociation</a></li>
-          </ul>     
         </ul>
       </li>
       <li>
         <a href="#">Aspects linguistiques</a>
         <ul class="submenu">
-          <li>
-            <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Combinatoire des PPI</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Aspects conversationnels</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
-          </li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Combinatoire des PPI</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Aspects conversationnels</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
         </ul>
       </li>
-  <!-- Pour ajouter plus de titres de menu :
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul>
-  --> 
   </nav>
 
   <div class="right-menu align-right">
           <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">
             Glossaire
           </button>
+          
           <a id="btn-apropos" href="apropos.html" class="btn btn-primary">
             À propos
           </a>
@@ -196,7 +187,7 @@
 				  		<div>
 					</div>
 				<a id="btn-commencer" href="introduction_activites.html" style="font-size: 1.6rem; height: 60px; min-width: unset;" class="btn btn-primary">Commencer</a>
-				<a id="btn-ppis" href="#" onclick="togglePpiInfo()" style="font-size: 1.6rem; height: 60px; min-width: unset;" class="btn btn-primary">Les PPIs, c'est quoi?</a>
+				<a id="btn-ppis" href="#" onclick="togglePpiInfo()" style="font-size: 1.6rem; height: 60px; min-width: unset;" class="btn btn-primary">Les PPI, c'est quoi ?</a>
 
 				</div>
 			</div>
@@ -299,17 +290,13 @@ document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
 		<h3>Glossaire</h3>
 		<input type="text" id="glossary-search" placeholder="Rechercher..." onkeyup="filterGlossary()" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
 		<ul id="glossary-list">
-			<li><strong>PPI</strong>: Phrases Préfabriquées des Interactions.</li>
-			<li><strong>Politesse</strong>: Expressions pour saluer, remercier, etc.</li>
-			<li><strong>Émotions</strong>: Phrases pour exprimer des sentiments.</li>
-			<li><strong>Accord/Désaccord</strong>: Formules pour exprimer une opinion.</li>
-			<li><strong>Contexte</strong>: Situation dans laquelle une phrase est utilisée.</li>
+
 		</ul>
 	</div>
 
 	<div id="ppi-info" style="display: none; position: fixed; top: 10%; left: 10%; width: 80%; max-width: 600px; background: white; padding: 20px; border-radius: 10px; z-index: 9999;">
 		<button class="close-btn" onclick="togglePpiInfo()">×</button>
-		<h3>Les PPIs, c'est quoi&nbsp;?</h3>
+		<h3>Les PPI, c'est quoi&nbsp; ?</h3>
 		<p> Les <strong>phrases préfabriquées des interactions</strong> sont des formules de la conversation toutes faites qu’on utilise souvent quand on parle avec les autres, surtout dans des situations courantes.<br>
 			Exemples : <i>c'est gentil ; on ne va pas se mentir ; ça va ; c'est bon.</i>
 		</p>

@@ -45,6 +45,7 @@
 	-->
 	<link rel="stylesheet" href="css/red.css">
 
+	
 	<style>
   .drag-drop-container {
     display: grid;
@@ -169,25 +170,10 @@
 		line-height: 25px;
 	}
 </style>
-	<!-- End demo purposes only -->
-
-
-	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
 	</head>
 
 
-	<!-- 
-		INFO:
-		Add 'boxed' class to body element to make the layout as boxed style.
-		Example: 
-		<body class="boxed">	
-	-->
 	<body>
 
 	<!-- Loader -->
@@ -265,13 +251,14 @@
 
   </style>
 
+  
   <nav>
     <ul class="menu">
       <li>
         <a href="#">Fonctions langagières</a>
         <ul class="submenu">
           <li>
-            <a href="module1.html">Rituels sociaux ▶</a>
+            <a href="module1.html">Rituels sociaux▶</a>
             <ul class="submenu">
               <li><a href="module1.html">Saluer</a></li>
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Remercier</a></li>
@@ -279,42 +266,33 @@
             </ul>
           </li>
           <li>
-            <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Exprimer une émotion ▶</a>
+          <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Indiquer son accord▶</a>
+          <ul class="submenu">
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Negociation</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Exprimer une émotion▶</a>
             <ul class="submenu">
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Joie et Enthousiasme</a></li>
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Reconfort et Encouragement</a></li>
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Surprise, étonnement et incrédulité</a></li>
             </ul>
           </li>
-          <li>
-          <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Indiquer son accord ▶</a>
-          <ul class="submenu">
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Negociation</a></li>
-          </ul>     
         </ul>
       </li>
       <li>
         <a href="#">Aspects linguistiques</a>
         <ul class="submenu">
-          <li>
-            <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Combinatoire des PPI</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Aspects conversationnels</a></li>
-						<li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
-          </li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Combinatoire des PPI</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Aspects conversationnels</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
         </ul>
       </li>
-  <!-- Pour ajouter plus de titres de menu :
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul>
-  --> 
   </nav>
+
 
   <div class="right-menu align-right">
           <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">
@@ -353,6 +331,7 @@
 			</div>
 		</section>
 
+
    <!-- Contenu principal -->
 <div id="fh5co-projects">
   <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
@@ -370,7 +349,7 @@
 					</div>
 			</div>
         </div>
-		<button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">Activités</button>
+		<button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">Lancer les activités</button>
       </div>
     </section>
   </section>
@@ -390,7 +369,7 @@
 					</div>
 			</div>
         </div>
-		<button class="btn btn-primary" onclick="document.getElementById('sal_cloture').scrollIntoView({ behavior: 'smooth' })">Activités</button>
+		<button class="btn btn-primary" onclick="document.getElementById('sal_cloture').scrollIntoView({ behavior: 'smooth' })">Lancer les activités</button>
       </div>
     </section>
   </section>
@@ -494,7 +473,7 @@
 <!-- Activité 5 -->
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite5" style="color:#FA5555;">Activité 5.</span> Écoutez et répondez. Vocal à un(e) ami(e).</h4>
+    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite5" style="color:#FA5555;">5.</span> Écoutez et répondez. Vocal à un(e) ami(e).</h4>
     <div style="margin-left: 32px;">
       <audio controls src="audio/vocal_salut.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
@@ -523,7 +502,7 @@
       ⭕ <span style="color:#FA5555;">1.</span> Qui parle ?
     </h4>
     <div style="margin-left: 32px;">
-      <audio controls src="audio/cloture_aud1.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+      <audio controls src="audio/cloture_aud1.mp3" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
         Cet extrait audio est issu de corpus FLEURON. Relevé le 22 mai 2025, à l’adresse https://fleuron.atilf.fr/
       </p>
@@ -542,7 +521,7 @@
       ⭕ <span style="color:#FA5555;">2.</span> Qui parle ?
     </h4>
     <div style="margin-left: 32px;">
-      <audio controls src="audio/Cloture_aud2.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+      <audio controls src="audio/cloture_aud2.mp3" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
         Cet extrait audio est issu de corpus FLEURON. Relevé le 22 mai 2025, à l’adresse https://fleuron.atilf.fr/
       </p>
@@ -612,13 +591,12 @@
 </div>
 
  <!-- Activité 6 (texte à trous clôture) -->
-<!-- Activité 3 (texte à trous clôture) -->
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
     <h4 style="margin-top:16px; margin-bottom:12px;">
       ⭕ <span style="color:#FA5555;">6.</span> Texte à trous.
     </h4>
-    <iframe src="https://ladigitale.dev/digiquiz/q/68371105cc3f6"
+    <iframe src="https://ladigitale.dev/digiquiz/q/683eedff07f0f"
   allow="fullscreen; autoplay;" frameborder="0" style="width: 100%; height: 870px; overflow: hidden;"></iframe>
   </div>
   </div>
@@ -627,7 +605,7 @@
   <div class="completion-message">
 	<div class="text-center">
   <p> Vous avez terminé cette capsule d'apprentissage. ✅ </p>  
-  <button onclick="window.location.href='remercier.html'"class="btn btn-primary">Passer à la prochaine leçon</button></div>
+  <button onclick="window.location.href='remercier.html'"class="btn btn-primary">Passer au prochain chapitre</button></div>
   </div>
 
 	<div id="glossary">
@@ -805,55 +783,6 @@ function playVideo1() {
     zone.addEventListener('dragleave', dragLeave);
     zone.addEventListener('drop', drop);
   });
-
-  let draggedItem = null;
-
-  function dragStart(e) {
-    draggedItem = e.target;
-    setTimeout(() => {
-      e.target.style.display = 'none';
-    }, 0);
-  }
-
-  function dragOver(e) {
-    e.preventDefault();
-  }
-
-  function dragEnter(e) {
-    e.preventDefault();
-    this.classList.add('over');
-  }
-
-  function dragLeave() {
-    this.classList.remove('over');
-  }
-
-  function drop() {
-    this.classList.remove('over');
-    const correctZoneId = correctAnswers[draggedItem.textContent];
-    if (this.id === correctZoneId) {
-      this.appendChild(draggedItem);
-      draggedItem.style.display = 'block';
-      draggedItem = null;
-    } else {
-      this.appendChild(draggedItem); // Leave the item in the incorrect zone
-      draggedItem.style.display = 'block';
-      draggedItem = null;
-    }
-  }
-
-  const correctAnswers = {
-    "Bonjour": "zone1",
-    "Salut": "zone1",
-    "Ça va ?": "zone1",
-    "Ça marche.": "zone3",
-    "C'est bon.": "zone3",
-    "Bonne journée.": "zone1",
-    "Pas de souci.": "zone3",
-    "Il est pour moi.": "zone3",
-    "Au revoir.": "zone1",
-	"Je retiens": "zone3",
-  };
 
   document.getElementById('correction-btn').addEventListener('click', () => {
     const items = document.querySelectorAll('.drag-drop-item');
