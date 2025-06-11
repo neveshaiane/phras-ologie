@@ -6,7 +6,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Module 1 &mdash;</title>
+	<title>Remercier</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -44,68 +44,72 @@
 	You can change the style.css (default color purple) to one of these styles
 	-->
 	<link rel="stylesheet" href="css/red.css">
-
-	<style>
-	</style>
-	<!-- End demo purposes only -->
-
-
-	<!-- Modernizr JS -->
+</style>
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
 	</head>
-
-
-	<!-- 
-		INFO:
-		Add 'boxed' class to body element to make the layout as boxed style.
-		Example: 
-		<body class="boxed">	
-	-->
 	<body>
-
 	<!-- Loader -->
 	<div class="fh5co-loader"></div>
 	
-	<div id="fh5co-page">
-		<section id="fh5co-header">
-			<div class="container">
-				<nav role="navigation">
-					<ul class="pull-left left-menu">
-						<li class="dropdown">
-						  <a href="module1.html">Politesse</a>
-						  <ul class="dropdown-menu">
-							<li><a href="module1.html#fh5co-projects">Contexte d'emploi</a></li>
-							<li><a href="module1.html#fh5co-about">Salutations</a></li>
-						  </ul>
-						</li>
-						<li class="dropdown">
-						  <a href="module2.html">Emotions</a>
-						  <ul class="dropdown-menu">
-							<li><a href="module2.html#fh5co-projects">Surprise</a></li>
-							<li><a href="module2.html#fh5co-about">Joie</a></li>
-							<li><a href="module2.html#fh5co-about">Colère</a></li>
-						  </ul>
-						</li>
-						<li class="dropdown">
-						  <a href="module3.html">Discussions</a>
-						  <ul class="dropdown-menu">
-							<li><a href="module3.html#fh5co-projects">Accord/Désaccord</a></li>
-							<li><a href="module3.html#fh5co-about">Négociation</a></li>
-						  </ul>
-						</li>
-					  </ul>
-					<h1 id="fh5co-logo"><a href="index.html">PREFAB<span>.FLE</span></a></h1>
-				</nav>
-			</div>
-		</section>
-		<!-- #fh5co-header -->
+	<!-- #fh5co-header -->
+  <section id="fh5co-header">
+    <!-- Menu -->
+  <nav>
+    <ul class="menu">
+      <li>
+        <a href="#">Fonctions langagières</a>
+        <ul class="submenu">
+          <li>
+            <a href="module1.html">Rituels sociaux▶</a>
+            <ul class="submenu">
+              <li><a href="module1.html">Saluer</a></li>
+              <li><a href="module2.html">Remercier</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">S'excuser</a></li>
+            </ul>
+          </li>
+          <li>
+          <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Indiquer son accord▶</a>
+          <ul class="submenu">
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Negociation</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Exprimer une émotion▶</a>
+            <ul class="submenu">
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Joie et Enthousiasme</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Reconfort et Encouragement</a></li>
+              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Surprise, étonnement et incrédulité</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Aspects linguistiques</a>
+        <ul class="submenu">
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Combinatoire des PPI</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Aspects conversationnels</a></li>
+          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
+        </ul>
+      </li>
+  </nav>
 
-		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/commerce.jpg);" data-next="yes">
+
+  <div class="right-menu align-right">
+          <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">
+            Glossaire
+          </button>
+          <a id="btn-apropos" href="apropos.html" class="btn btn-primary">
+            À propos
+          </a>
+        </div>
+        
+        <ul id="fh5co-logo">
+          <a href="index.html">PREFAB<span>.FLE</span></a>
+    </ul>
+  </section>
+		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/cover.jpg);" data-next="yes">
 			<div class="fh5co-overlay"></div>
 			<div class="container">
 				<div class="fh5co-intro no-js-fullheight">
@@ -117,150 +121,94 @@
 							<div class="fh5co-right-position">
 						-->
 						<div class="fh5co-center-position">
-							<h2 class="animate-box">Au commerce</h2>
-							<h3 class="animate-box">Des phrases clés pour demander un prix, réaliser une demande adminsitrative et échanger avec les commerçants.</h3>
-						</div>
+							<h2 class="animate-box">Remercier</h2>
+							<h3 class="animate-box">Exprimez la reconnaissance et renforcez les liens sociaux au quotidien.</h3>
+						  <button class="btn btn-primary" onclick="document.getElementById('fh5co-projects').scrollIntoView({ behavior: 'smooth' })">Apprendre</button>
+              <button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
+            </div>
 					</div>
 				</div>
-			</div>
-			<div class="fh5co-learn-more animate-box">
-				<a href="#" class="scroll-btn">
-					<span class="text">Découvrez nos capsules vidéos</span>
-					<span class="arrow"><i class="icon-chevron-down"></i></span>
-				</a>
 			</div>
 		</section>
-		<!-- END #fh5co-hero -->
-	<!-- END #fh5co-hero -->
-	 	<!-- END #fh5co-hero -->
-		 	<!-- END #fh5co-hero -->
-			 	<!-- END #fh5co-hero -->
-				 <!-- Removed React component code -->
-	<!-- END #fh5co-hero -->
-		<!-- END #fh5co-hero -->
-		 	<!-- END #fh5co-hero -->
-			 	<!-- END #fh5co-hero -->
-				 	<!-- END #fh5co-hero -->
-					 	<!-- END #fh5co-hero --> 
-	<div id="fh5co-about">
-			<div class="container">
-				<div class="row row-bottom-padded-lg">
-					<div class="col-md-6">
-						<figure class="animate-box">
-							<iframe 
-								width="100%" 
-								height="315" 
-								src="https://www.youtube.com/embed/HLtKTGwPuvc" 
-								title="Boulangerie" 
-								frameborder="0" 
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-								allowfullscreen>
-							</iframe>
-						</figure>
+      <!-- Contenu principal -->
+  <div id="fh5co-projects">
+  <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+    <h2>🔴 Pour remercier, exprimer sa gratitude</h2>
+  </div>
+  <section id="fh5co-projects">
+    <section class="intro">
+      <div class="text-center">
+        <div class="video-container">
+			<div class="video-wrapper">
+				<!-- Video cover -->
+					<div id="videocloture" class="video-cover" onclick="playVideo1()">
+						<img src="images/remerciercover.jpg" alt="Video Cover" style="width: 100%; height: auto; cursor: pointer;">
 					</div>
-					<div class="col-md-6">
-						<div class="fh5co-label animate-box">Au commerce</div>
-						<h2 class="fh5co-lead animate-box">À la Boulangerie</h2>
-						<p class="fh5co-sub-lead animate-box">Un client commande du pain dans une boulangerie - épicerie</p>
+			</div>
+        </div>
+		<button class="btn btn-primary" onclick="document.getElementById('sal_cloture').scrollIntoView({ behavior: 'smooth' })">Lancer les activités</button>
+      </div>
+    </section>
+  </section>
+	 <script>
+function playVideo1() {
+		const videoContainer = document.getElementById('videocloture');
+			videoContainer.innerHTML = `
+					<div class="video-wrapper">
+						<iframe width="80%" height="400" src="video/remercier.mp4" frameborder="0" allow="picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
-				</div>
+				`;
+				}
 
-				<div class="row">
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-person">	
-								<iframe 
-									width="100%" 
-									height="315" 
-									src="https://www.youtube.com/embed/NKqyQZ-VjRY" 
-									title="Prise de rendez-vous" 
-									frameborder="0" 
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-									allowfullscreen>
-								</iframe>
-							</figure>
-							<h3 class="fh5co-name animate-box">Prendre un rendez-vous</h3>
-							<h4 class="fh5co-designation animate-box">au téléphone</h4>
-							<ul class="fh5co-social">
-								<li class="animate-box"><a href="#"><i class="icon-twitter"></i></a></li>
+</script>
+
+<div class="completion-message" id="completion-message" style="background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin: 40px auto 32px auto; max-width: 600px; padding: 32px 24px; opacity: 0; pointer-events: none; transition: opacity 0.7s;">
+  <div class="text-center">
+    <p>Vous avez terminé cette capsule d'apprentissage. ✅</p>
+    <button onclick="window.location.href='module3.html'" class="btn btn-primary">Passer au prochain chapitre</button>
+  </div>
+</div>
+
+<script>
+// Affiche la zone quand elle entre dans le viewport
+const completion = document.getElementById('completion-message');
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      completion.style.opacity = 1;
+      completion.style.pointerEvents = 'auto';
+    } else {
+      completion.style.opacity = 0;
+      completion.style.pointerEvents = 'none';
+    }
+  });
+}, { threshold: 0.5 }); // 50% visible
+observer.observe(completion);
+</script>
+	<footer id="fh5co-footer">
+			<div class="container">
+				<div class="row row-bottom-padded-md">
+
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<ul class="fh5co-links">
+								<li><a href="apropos.html">À propos</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-person">
-							<iframe 
-							width="100%" 
-							height="315" 
-							src="https://www.youtube.com/embed/75Y612SUvZ0" 
-							title="Demander une carte réduction" 
-							frameborder="0" 
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-							allowfullscreen>
-						</iframe>
-							<h3 class="fh5co-name animate-box">Demander une carte réduction</h3>
-							<h4 class="fh5co-designation animate-box">en agence</h4>
-							<ul class="fh5co-social">
-								<li class="animate-box"><a href="#"><i class="icon-twitter"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="fh5co-person">
-							<iframe 
-							width="100%" 
-							height="315" 
-							src="https://www.youtube.com/embed/RtNk6j-mTSY" 
-							title="Demander une carte réduction" 
-							frameborder="0" 
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-							allowfullscreen>
-						</iframe>
-							<h3 class="fh5co-name animate-box">Refaire une carte étudiante</h3>
-							<h4 class="fh5co-designation animate-box">en agence</h4>
-							<ul class="fh5co-social">
-								<li class="animate-box"><a href="#"><i class="icon-twitter"></i></a></li>
-							</ul>
+					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
+						<div class="fh5co-footer-widget">
+							<h3>Contactez-nous</h3>
+							<p>
+								<p>PREFAB © 2025</p>
+								<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
+                				<p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB-FLE</a></small></p>
+							</p>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>	
-		<footer id="fh5co-footer">
-		<div class="fh5co-copyright animate-box">
-		  <div class="container">
-			<div class="row">
-			  <div class="col-md-12">
-				<p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB</a></small></p><div>
-			</div>
-		  </div>
-		</div>
-				  <div class="container">
-					  <div class="row row-bottom-padded-md">
-						  <div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-							  <div class="fh5co-footer-widget">
-								  <ul class="fh5co-links">
-									  <li><a href="#">À propos</a></li>
-									  <li><a href="#">Credits</a></li>
-									  <li><a href="#">Terms of Use</a></li>
-								  </ul>
-							  </div>
-						  </div>
-						  <div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-							  <div class="fh5co-footer-widget">
-								<p>
-									<p>PREFAB © 2025</p>
-									<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
-									<a href="prefab">https://prefab.hypotheses.org/</a> <br>
-								</p>
-							  </div>
-						  </div>
-	  
-					  </div>
-			  </footer>
-			<!-- END #fh5co-footer -->
-		</div>
-		<!-- END #fh5co-page -->
-		
-		
+		</footer>
+<!-- END #fh5co-footer -->
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
@@ -274,10 +222,11 @@
 		<!-- Magnific Popup -->
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/magnific-popup-options.js"></script>
-	
-	
 		<!-- Main JS (Do not remove) -->
 		<script src="js/main.js"></script>
-	
+		<!-- Fermer le menu latéral mobile (offcanvas) -->
+<script>
+// Suppression du script d'ajout du bouton "fermer" pour le menu latéral mobile
+</script>
 		</body>
 	</html>
