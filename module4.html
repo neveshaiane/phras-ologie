@@ -6,7 +6,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Remercier</title>
+	<title>Accord et désaccord</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -107,7 +107,7 @@
           <a href="index.html">PREFAB<span>.FLE</span></a>
     </ul>
   </section>
-		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/cover.jpg);" data-next="yes">
+		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/accord.png);" data-next="yes">
 			<div class="fh5co-overlay"></div>
 			<div class="container">
 				<div class="fh5co-intro no-js-fullheight">
@@ -119,8 +119,8 @@
 							<div class="fh5co-right-position">
 						-->
 						<div class="fh5co-center-position">
-							<h2 class="animate-box">Remercier</h2>
-							<h3 class="animate-box">Exprimez la reconnaissance et renforcez les liens sociaux au quotidien.</h3>
+							<h2 class="animate-box">Accord et désaccord</h2>
+							<h3 class="animate-box">Découvrez les expressions pour exprimer son (dés)accord.</h3>
 						  <button class="btn btn-primary" onclick="document.getElementById('fh5co-projects').scrollIntoView({ behavior: 'smooth' })">Apprendre</button>
               <button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
             </div>
@@ -131,27 +131,42 @@
       <!-- Contenu principal -->
   <div id="fh5co-projects">
   <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-    <h2>🔴 Pour remercier, exprimer sa gratitude</h2>
+    <h2>🔴 Pour exprimer son accord</h2>
   </div>
   <section id="fh5co-projects">
     <section class="intro">
       <div class="text-center">
         <div class="video-container">
-			<div>
-				<!-- Vidéo remercier avec poster -->
-				<video src="video/remercier.mp4" controls poster="images/remerciercover.jpg" style="width: 100%; height: 450px; border-radius: 20px; background: none; border: none;"></video>
+			<div class="video-wrapper">
+
 			</div>
         </div>
-		<button class="btn btn-primary" onclick="document.getElementById('sal_cloture').scrollIntoView({ behavior: 'smooth' })">Lancer les activités</button>
-      </div>
+
+    </div>
     </section>
   </section>
+    <div id="fh5co-projects">
+  <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+    <h2>🔴 Pour exprimer son désaccord</h2>
+  </div>
+	 <script>
+function playVideo1() {
+		const videoContainer = document.getElementById('videocloture');
+			videoContainer.innerHTML = `
+					<div class="video-wrapper">
+						<iframe width="80%" height="400" src="video/remercier.mp4" frameborder="0" allow="picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+				`;
+				}
+
+</script>
 
 <div class="completion-message" id="completion-message" style="background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin: 40px auto 32px auto; max-width: 600px; padding: 32px 24px; opacity: 0; pointer-events: none; transition: opacity 0.7s;">
   <div class="text-center">
     <p>Vous avez terminé cette capsule d'apprentissage. ✅</p>
-	<button onclick="window.location.href='module1.html'" class="btn btn-primary">← Chapitre précédent</button>
-    <button onclick="window.location.href='module3.html'" class="btn btn-primary">Chapitre suivant →</button>
+	<button onclick="window.location.href='module3.html'" class="btn btn-primary">← Chapitre précédent</button>
+ 	 <button id="btn-next-chap" class="btn btn-primary">Chapitre suivant →</button>
+    <p id="dev-message" style="display:none; color: #FA5555; font-weight: bold; text-align: center; margin-top: 24px;">Désolé, la page du chapitre suivant est en cours de développement.</p>
   </div>
 </div>
 
@@ -170,6 +185,15 @@ const observer = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.5 }); // 50% visible
 observer.observe(completion);
+// Affiche le message de développement au clic sur le bouton suivant
+const btnNextChap = document.getElementById('btn-next-chap');
+const devMessage = document.getElementById('dev-message');
+if(btnNextChap && devMessage) {
+  btnNextChap.addEventListener('click', function() {
+    devMessage.style.display = 'block';
+    btnNextChap.blur();
+  });
+}
 </script>
 	<footer id="fh5co-footer">
 			<div class="container">

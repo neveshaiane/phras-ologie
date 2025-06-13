@@ -64,13 +64,13 @@
             <ul class="submenu">
               <li><a href="module1.html">Saluer</a></li>
               <li><a href="module2.html">Remercier</a></li>
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">S'excuser</a></li>
+             <li><a href="module3.html">S'excuser</a></li>
             </ul>
           </li>
           <li>
-          <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Indiquer son accord▶</a>
+        <a href="module4.html">Indiquer son accord▶</a>
           <ul class="submenu">
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Accord et désaccord</a></li>
+               <li><a href="module4.html">Accord et désaccord</a></li>
               <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Negociation</a></li>
             </ul>
           </li>
@@ -97,9 +97,7 @@
 
 
   <div class="right-menu align-right">
-          <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">
-            Glossaire
-          </button>
+       <a id="btn-glossaire" class="btn btn-primary" href="glossaire.html">Glossaire</a>
           <a id="btn-apropos" href="apropos.html" class="btn btn-primary">
             À propos
           </a>
@@ -144,11 +142,9 @@
     <section class="intro">
             <div class="text-center">
         <div class="video-container">
-			<div class="video-wrapper">
-				<!-- Video cover -->
-					<div id="videoouverture" class="video-cover" onclick="playVideo()">
-						<img src="images/ouverturecover.png" alt="Video Cover" style="width: 100%; height: auto; cursor: pointer;">
-					</div>
+			<div>
+				<!-- Vidéo d'ouverture avec poster -->
+				<video src="video/ouverture.mp4" controls poster="images/ouverturecover.png" style="width: 100%; height: 450px; border-radius: 20px; background: none; border: none;"></video>
 			</div>
         </div>
 		<button class="btn btn-primary" onclick="document.getElementById('fh5co-about').scrollIntoView({ behavior: 'smooth' })">Lancer les activités</button>
@@ -164,18 +160,16 @@
     <section class="intro">
       <div class="text-center">
         <div class="video-container">
-			<div class="video-wrapper">
-				<!-- Video cover -->
-					<div id="videocloture" class="video-cover" onclick="playVideo1()">
-						<img src="images/cloturecover.png" alt="Video Cover" style="width: 100%; height: auto; cursor: pointer;">
-					</div>
+			<div>
+				<!-- Vidéo de clôture avec poster -->
+				<video src="video/cloture.mp4" controls poster="images/cloturecover.jpg" style="width: 100%; height: 450px; border-radius: 20px; background: none; border: none;"></video>
 			</div>
         </div>
 		<button class="btn btn-primary" onclick="document.getElementById('sal_cloture').scrollIntoView({ behavior: 'smooth' })">Lancer les activités</button>
       </div>
     </section>
   </section>
-	
+
      <!-- Activités -->
      <section id="fh5co-about">
       <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
@@ -191,83 +185,71 @@
 	</div>
 
   <script>
+    function toggleGlossary() {
+      const glossary = document.getElementById('glossary');
+      if (glossary.style.display === 'none' || glossary.style.display === '') {
+        glossary.style.display = 'block'; // Show the glossary
+      } else {
+        glossary.style.display = 'none'; // Hide the glossary
+      }
+    }
 
-	function playVideo() {
-		const videoContainer = document.getElementById('videoouverture');
-			videoContainer.innerHTML = `
-					<div class="video-wrapper">
-						<iframe width="80%" height="400" src="video/ouverture.mp4" frameborder="0" allow="picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					</div>
-				`;
-				}
-function playVideo1() {
-		const videoContainer = document.getElementById('videocloture');
-			videoContainer.innerHTML = `
-					<div class="video-wrapper">
-						<iframe width="80%" height="400" src="video/cloture.mp4" frameborder="0" allow="picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					</div>
-				`;
-				}
+    function filterGlossary() {
+      const searchInput = document.getElementById('glossary-search').value.toLowerCase();
+      const glossaryItems = document.querySelectorAll('#glossary-list li');
 
-</script>
+      glossaryItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(searchInput)) {
+          item.style.display = ''; // Show item
+        } else {
+          item.style.display = 'none'; // Hide item
+        }
+      });
+    }
+  </script>
 
-	<script>
-		function toggleGlossary() {
-			const glossary = document.getElementById('glossary');
-			if (glossary.style.display === 'none' || glossary.style.display === '') {
-				glossary.style.display = 'block'; // Show the glossary
-			} else {
-				glossary.style.display = 'none'; // Hide the glossary
-			}
-		}
-
-		function filterGlossary() {
-			const searchInput = document.getElementById('glossary-search').value.toLowerCase();
-			const glossaryItems = document.querySelectorAll('#glossary-list li');
-
-			glossaryItems.forEach(item => {
-				const text = item.textContent.toLowerCase();
-				if (text.includes(searchInput)) {
-					item.style.display = ''; // Show item
-				} else {
-					item.style.display = 'none'; // Hide item
-				}
-			});
-		}
-	</script>
-
-      
- <!-- Activité 1 -->
-  <div class="video-container" style="margin-bottom: 40px;">
-    <div class="video-wrapper">
+<!-- Activité 1 -->
+<div class="video-container" style="margin-bottom: 40px;">
+  <div class="video-wrapper">
     <h4 style="margin-top:16px; margin-bottom:12px;">
-      ⭕ <span style="color:#FA5555">1.</span> Regardez la vidéo interactive et répondez aux questions.
+      ⭕ <span style="color:#FA5555">1.</span> Regardons de plus près l'extrait accueillir des invités. <button style="text-align: center;" class="btn btn-primary" onclick="openCavaModal()">Regarder l'extrait</button>
     </h4>
-    <iframe 
-      src="Ouverture_Act1.html" allow="fullscreen; autoplay;" 
-      frameborder="0" style="width: 100%; height: 500px;" frameborder="0" allowfullscreen>
-    </iframe>
-      <div style="margin-left: 32px;">
-    <p style="margin-left: 32px;">Cet extrait vidéo est issu de corpus FLEURON. Relevé le 7 mai 2025, à l’adresse https://fleuron.atilf.fr/</p>
+    <iframe src="https://ladigitale.dev/digiquiz/q/6836d55343cc3" allow="fullscreen; autoplay;" frameborder="0" style="width: 100%; height: 780px; overflow: hidden;"></iframe>
+  
     </div>
+
+    <!-- Popup vidéo çava -->
+    <div id="cava-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.55); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:14px; max-width:260px; width:92vw; margin:auto; box-shadow:0 4px 24px rgba(0,0,0,0.18); padding:10px 4px 4px 4px; position:relative; text-align:center;">
+        <button onclick="closeCavaModal()" style="position:absolute; top:-24px; right:-24px; background:#fff; border:none; font-size:2.6rem; color:#FA5555; cursor:pointer; line-height:1; width:48px; height:48px; border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,0.12); display:flex; align-items:center; justify-content:center; transition:background 0.2s; z-index:10;"
+  onmouseover="this.style.background='#ffe5ea'" onmouseout="this.style.background='#fff'">&times;</button>
+        <video src="video/çava.mp4" controls style="width:98%; max-width:220px; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.08);"></video>
+      </div>
+    </div>
+
+    <script>
+    function openCavaModal() {
+      document.getElementById('cava-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCavaModal() {
+      document.getElementById('cava-modal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    // Fermer la popup si on clique en dehors du contenu
+    window.addEventListener('click', function(e) {
+      var modal = document.getElementById('cava-modal');
+      if (modal && e.target === modal) closeCavaModal();
+    });
+    </script>
   </div>
 </div>
-
 <!-- Activité 2 -->
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
     <h4 style="margin-top:16px; margin-bottom:12px;">
-      ⭕ <span style="color:#FA5555">2.</span> Texte à trous.
-    </h4>
-    <iframe src="https://ladigitale.dev/digiquiz/q/6836d55343cc3" allow="fullscreen; autoplay;" frameborder="0" style="width: 100%; height: 850px; overflow: hidden;"></iframe>
-  </div>
-</div>
-
-<!-- Activité 3 -->
-<div class="video-container" style="margin-bottom: 40px;">
-  <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">
-      ⭕ <span style="color:#FA5555">3.</span> Devinez la phrase qui suit.
+      ⭕ <span style="color:#FA5555">2.</span> Devinez la phrase qui suit.
     </h4>
     <video src="video/fromagerie_salutation.mp4" controls style="width: 80%; display: block; margin: 0 auto; border-radius: 16px; margin-bottom: 16px;"></video>
     <p style="margin-left: 32px;">Cet extrait vidéo est issu de corpus CLAPI FLE. Relevé le 16 avril 2025, à l’adresse http://clapi.icar.cnrs.fr/FLE/</p>
@@ -275,11 +257,11 @@ function playVideo1() {
   </div>
 </div>
     
-<!-- Activité 4 -->
+<!-- Activité 3 -->
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
     <h4 style="margin-top:16px; margin-bottom:12px;">
-      ⭕ <span style="color:#FA5555">4.</span> Regardez la vidéo et répondez. Dans un bureau à l’université, un employé parle à une étudiante.
+      ⭕ <span style="color:#FA5555">3.</span> Regardez la vidéo et répondez. Dans un bureau à l’université, un employé parle à une étudiante.
     </h4>
     <video src="video/Carte_etudiante_salutation.mp4" controls style="width: 80%; display: block; margin: 0 auto; border-radius: 16px; margin-bottom: 16px;"></video>
     <p style="margin-left: 32px;">Cet extrait vidéo est issu de corpus FLEURON. Relevé le 7 mai 2025, à l’adresse https://fleuron.atilf.fr/</p>
@@ -287,10 +269,10 @@ function playVideo1() {
   </div>
 </div>
 
-<!-- Activité 5 -->
+<!-- Activité 4 -->
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite5" style="color:#FA5555;">5.</span> Écoutez et répondez. Vocal à un(e) ami(e).</h4>
+    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite5" style="color:#FA5555;">4.</span> Écoutez et répondez. Vocal à un(e) ami(e).</h4>
     <div style="margin-left: 32px;">
       <audio controls src="audio/vocal_salut.wav" class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
       <p style="margin-bottom: 16px;">
@@ -423,7 +405,8 @@ function playVideo1() {
 <div class="completion-message" id="completion-message" style="background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin: 40px auto 32px auto; max-width: 600px; padding: 32px 24px; opacity: 0; pointer-events: none; transition: opacity 0.7s;">
   <div class="text-center">
     <p>Vous avez terminé cette capsule d'apprentissage. ✅</p>
-    <button onclick="window.location.href='module2.html'" class="btn btn-primary">Passer au prochain chapitre</button>
+    <button onclick="window.location.href='intro.html'" class="btn btn-primary">← Chapitre précédent</button>
+    <button onclick="window.location.href='module2.html'" class="btn btn-primary">Chapitre suivant →</button>
   </div>
 </div>
 <script>
